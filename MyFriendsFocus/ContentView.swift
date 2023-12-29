@@ -12,16 +12,27 @@ import Contacts
 struct ContentView: View {
     // StateObject нужен для хранения классов, за которыми View будет наблюдать и автоматически перерисовывать ui если наблюдаемые параметры изменились
     @StateObject private var viewModel = ContactManager()
+    
+    
+    @State private var testValue = false
     var body: some View {
-        // Сделали подписку на этот массив, теперь всегда при изменении этого параметра, Table будет перерисовываться
-        Table(viewModel.contactData){
-            TableColumn("My Contacts"){ contact in
-                HStack{
-                    contactImage(contact)
-                    Text(contact.fullName)
-                }
+        VStack {
+            Text(testValue.description)
+            Button {
+                testValue.toggle()
+            } label: {
+                Text("Change Value, Right now its \(testValue.description)")
             }
-            
+            // Сделали подписку на этот массив, теперь всегда при изменении этого параметра, Table будет перерисовываться
+            Table(viewModel.contactData){
+                TableColumn("My Contacts"){ contact in
+                    HStack{
+                        contactImage(contact)
+                        Text(contact.fullName)
+                    }
+                }
+                
+            }
         }
     }
     
