@@ -24,6 +24,8 @@ struct ContentView: View {
                     let image = UIImage(data: data){
                         // модификаторы к View элементам принято с новой строки писать, это сильно читабельнее и пизды могут дать если в строку будешь ебашить
                         Image(uiImage: image)
+                            .resizable()
+                            .scaledToFill() // Есть еще scaledToFit, но в данном случае так красивей
                             .frame(width: 50, height: 50)
                             .cornerRadius(15)
                     }
