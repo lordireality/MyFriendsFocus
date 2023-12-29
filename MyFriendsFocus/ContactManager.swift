@@ -14,8 +14,10 @@ class ContactManager: ObservableObject{
     var resp = false
     ///if exception on init was thrown, text will be placed here
     var ex:String? = nil
+    
+    // Published это враппер переменной, который отошлет всем ее подписчикам новое значение, это то же самое как враппер "@State", но только внутри классов
     ///array of fetched contacts
-    var contactData:[ContactInfo] = []
+    @Published var contactData:[ContactInfo] = []
     
     init() {
         let store = CNContactStore()
@@ -38,7 +40,11 @@ class ContactManager: ObservableObject{
                         
                         //TODO: Add from siri-kit recieve contact focus
                         //idk how it supposed to work
-                        self.contactData.append(ContactInfo(fullName: "\(contact.familyName) \(contact.givenName) \(contact.middleName)", profilePicData:  contact.thumbnailImageData, profilePicImg: getImageFromData(data: contact.thumbnailImageData, defaultNamed: "ContactThumbnail")))
+                        // Так как теперь массив это элемент, который заставляет перерисовываться ui, то менять массив нужно только через main поток, читай DispatchQueue basics
+                        // Фактически, эта хуйня передает кусок кода, который надо выполнить на определенном потоке, в данном случае на главном, передаем мы замыкание, у гоев это называется лямбда
+                        DispatchQueue.main.async {
+                            self.contactData.append(ContactInfo(fullName: "\(contact.familyName) \(contact.givenName) \(contact.middleName)", profilePicData:  contact.thumbnailImageData, profilePicImg: getImageFromData(data: contact.thumbnailImageData, defaultNamed: "ContactThumbnail")))
+                        }
                         self.resp = true
                     }
                 } catch {
