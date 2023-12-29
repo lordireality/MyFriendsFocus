@@ -9,7 +9,7 @@ import Foundation
 import Contacts
 
 ///Contact manager (ну а what ты хотел)
-class ContactManager{
+class ContactManager: ObservableObject{
     ///Is fetching contacts was succesfull
     var resp = false
     ///if exception on init was thrown, text will be placed here
