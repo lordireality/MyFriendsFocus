@@ -10,6 +10,8 @@ import Foundation
 import Contacts
 
 struct ContentView: View {
+    // StateObject нужен для хранения классов, за которыми View будет наблюдать и автоматически перерисовывать ui если наблюдаемые параметры изменились
+    @StateObject private var viewModel = ContactManager()
     var body: some View {
         var contactData = ContactManager.init()
         if contactData.resp {
