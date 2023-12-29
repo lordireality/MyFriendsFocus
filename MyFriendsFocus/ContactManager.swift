@@ -38,7 +38,7 @@ class ContactManager{
                         
                         //TODO: Add from siri-kit recieve contact focus
                         //idk how it supposed to work
-                        self.contactData.append(ContactInfo(fullName: "\(contact.familyName) \(contact.givenName) \(contact.middleName)", profilePicData:  contact.thumbnailImageData))
+                        self.contactData.append(ContactInfo(fullName: "\(contact.familyName) \(contact.givenName) \(contact.middleName)", profilePicData:  contact.thumbnailImageData, profilePicImg: getImageFromData(data: contact.thumbnailImageData, defaultNamed: "ContactThumbnail")))
                         self.resp = true
                     }
                 } catch {

@@ -6,7 +6,7 @@
 //
 
 import Foundation
-
+import SwiftUI
 /// Model for passing data to content view from Manager
 struct ContactInfo : Identifiable {
     ///
@@ -15,7 +15,9 @@ struct ContactInfo : Identifiable {
     var fullName:String = "";
     ///Is specified contact have applied focus
     var isFocus:Bool = false;
-    ///Contact photo. If no photo set - nil
+    ///Contact photo data. If no photo set - nil
     var profilePicData:Data? = nil
+    
+    var profilePicImg:Image
 }
 
