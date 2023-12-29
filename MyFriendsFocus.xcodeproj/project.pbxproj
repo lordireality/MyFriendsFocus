@@ -7,13 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		67241F582B3F4816005830C6 /* ContactInfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67241F572B3F4815005830C6 /* ContactInfoViewModel.swift */; };
 		67425E4D2B3DDE0100AE9F9C /* MyFriendsFocusApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67425E4C2B3DDE0100AE9F9C /* MyFriendsFocusApp.swift */; };
 		67425E4F2B3DDE0100AE9F9C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67425E4E2B3DDE0100AE9F9C /* ContentView.swift */; };
 		67425E512B3DDE0400AE9F9C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 67425E502B3DDE0400AE9F9C /* Assets.xcassets */; };
 		67425E542B3DDE0400AE9F9C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 67425E532B3DDE0400AE9F9C /* Preview Assets.xcassets */; };
-		67425E5E2B3DDE0400AE9F9C /* MyFriendsFocusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67425E5D2B3DDE0400AE9F9C /* MyFriendsFocusTests.swift */; };
-		67425E682B3DDE0500AE9F9C /* MyFriendsFocusUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67425E672B3DDE0500AE9F9C /* MyFriendsFocusUITests.swift */; };
-		67425E6A2B3DDE0500AE9F9C /* MyFriendsFocusUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67425E692B3DDE0500AE9F9C /* MyFriendsFocusUITestsLaunchTests.swift */; };
+		67425E772B3DE57300AE9F9C /* ContactManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67425E762B3DE57300AE9F9C /* ContactManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,16 +33,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		67241F572B3F4815005830C6 /* ContactInfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactInfoViewModel.swift; sourceTree = "<group>"; };
 		67425E492B3DDE0100AE9F9C /* MyFriendsFocus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyFriendsFocus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		67425E4C2B3DDE0100AE9F9C /* MyFriendsFocusApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFriendsFocusApp.swift; sourceTree = "<group>"; };
 		67425E4E2B3DDE0100AE9F9C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		67425E502B3DDE0400AE9F9C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		67425E532B3DDE0400AE9F9C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		67425E592B3DDE0400AE9F9C /* MyFriendsFocusTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyFriendsFocusTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		67425E5D2B3DDE0400AE9F9C /* MyFriendsFocusTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFriendsFocusTests.swift; sourceTree = "<group>"; };
 		67425E632B3DDE0400AE9F9C /* MyFriendsFocusUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyFriendsFocusUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		67425E672B3DDE0500AE9F9C /* MyFriendsFocusUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFriendsFocusUITests.swift; sourceTree = "<group>"; };
-		67425E692B3DDE0500AE9F9C /* MyFriendsFocusUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFriendsFocusUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		67425E762B3DE57300AE9F9C /* ContactManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,8 +73,6 @@
 			isa = PBXGroup;
 			children = (
 				67425E4B2B3DDE0100AE9F9C /* MyFriendsFocus */,
-				67425E5C2B3DDE0400AE9F9C /* MyFriendsFocusTests */,
-				67425E662B3DDE0400AE9F9C /* MyFriendsFocusUITests */,
 				67425E4A2B3DDE0100AE9F9C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -98,6 +94,8 @@
 				67425E4E2B3DDE0100AE9F9C /* ContentView.swift */,
 				67425E502B3DDE0400AE9F9C /* Assets.xcassets */,
 				67425E522B3DDE0400AE9F9C /* Preview Content */,
+				67425E762B3DE57300AE9F9C /* ContactManager.swift */,
+				67241F572B3F4815005830C6 /* ContactInfoViewModel.swift */,
 			);
 			path = MyFriendsFocus;
 			sourceTree = "<group>";
@@ -108,23 +106,6 @@
 				67425E532B3DDE0400AE9F9C /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		67425E5C2B3DDE0400AE9F9C /* MyFriendsFocusTests */ = {
-			isa = PBXGroup;
-			children = (
-				67425E5D2B3DDE0400AE9F9C /* MyFriendsFocusTests.swift */,
-			);
-			path = MyFriendsFocusTests;
-			sourceTree = "<group>";
-		};
-		67425E662B3DDE0400AE9F9C /* MyFriendsFocusUITests */ = {
-			isa = PBXGroup;
-			children = (
-				67425E672B3DDE0500AE9F9C /* MyFriendsFocusUITests.swift */,
-				67425E692B3DDE0500AE9F9C /* MyFriendsFocusUITestsLaunchTests.swift */,
-			);
-			path = MyFriendsFocusUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,6 +239,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				67425E4F2B3DDE0100AE9F9C /* ContentView.swift in Sources */,
+				67241F582B3F4816005830C6 /* ContactInfoViewModel.swift in Sources */,
+				67425E772B3DE57300AE9F9C /* ContactManager.swift in Sources */,
 				67425E4D2B3DDE0100AE9F9C /* MyFriendsFocusApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -266,7 +249,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				67425E5E2B3DDE0400AE9F9C /* MyFriendsFocusTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,8 +256,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				67425E682B3DDE0500AE9F9C /* MyFriendsFocusUITests.swift in Sources */,
-				67425E6A2B3DDE0500AE9F9C /* MyFriendsFocusUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,6 +327,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_KEY_NSContactsUsageDescription = "Очень надо для работы аппы)";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
@@ -404,6 +385,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_KEY_NSContactsUsageDescription = "Очень надо для работы аппы)";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
@@ -422,6 +404,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MyFriendsFocus/Preview Content\"";
+				DEVELOPMENT_TEAM = DQBS9FK8M3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -450,6 +433,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MyFriendsFocus/Preview Content\"";
+				DEVELOPMENT_TEAM = DQBS9FK8M3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
