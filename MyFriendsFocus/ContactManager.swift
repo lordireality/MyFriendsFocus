@@ -117,6 +117,7 @@ class AuthManager: ObservableObject{
     }
     
     init() {
-        checkAcess();
+        checkAccessContacts()
+        checkAccessFocus()
     }
 }

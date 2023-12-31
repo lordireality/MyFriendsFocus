@@ -18,9 +18,9 @@ struct ContentView: View {
         HStack{}.sheet(isPresented: $showingFirstLauch, onDismiss: SetFirstLaunchStateFalse){
             WhatsNewView()
         }
-        switch authManager.accessGranted {
+        switch authManager.accessGrantedContacts{
         case .notDetermined:
-            GivePermissionView(authManager: authManager)
+            GivePermissionContactsView(authManager: authManager)
         case .restricted:
             AccessDeniedView()
         case .denied:
@@ -28,7 +28,7 @@ struct ContentView: View {
         case .authorized:
             ContactsView(contactManager: ContactManager(store: authManager.store))
         default:
-            GivePermissionView(authManager: authManager)
+            GivePermissionContactsView(authManager: authManager)
         }
 
 

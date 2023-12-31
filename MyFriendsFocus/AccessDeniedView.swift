@@ -13,9 +13,9 @@ struct AccessDeniedView: View {
     var body: some View {
         VStack {
             Image(uiImage: UIImage(named: "SettingsThumbnail") ?? UIImage())
-            Text("Доступ к контактам запрещен.")
+            Text("Доступ к контактам или фокусировке запрещен.")
                 .multilineTextAlignment(.center)
-            Text("Для работы приложения, необходимо предоставить доступ к контактам")
+            Text("Для работы приложения, необходимо предоставить доступ к контактам и состоянию фокусировки устройства")
                 .multilineTextAlignment(.center)
             Button("Перейти в настройки"){
                 if let url = URL(string: UIApplication.openSettingsURLString) {
