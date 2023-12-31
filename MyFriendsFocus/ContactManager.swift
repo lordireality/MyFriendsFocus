@@ -7,6 +7,12 @@
 
 import Foundation
 import Contacts
+
+class FocusManager{
+    
+}
+
+
 class ContactManager: ObservableObject{
     ///array of fetched contacts
     @Published var contactData:[ContactInfo] = []

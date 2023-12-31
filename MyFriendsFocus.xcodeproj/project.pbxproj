@@ -17,6 +17,8 @@
 		674985412B40F4BF00280B58 /* ContactsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 674985402B40F4BF00280B58 /* ContactsView.swift */; };
 		674985432B40F56500280B58 /* GivePermissionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 674985422B40F56500280B58 /* GivePermissionView.swift */; };
 		674985452B410F8D00280B58 /* AccessDeniedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 674985442B410F8D00280B58 /* AccessDeniedView.swift */; };
+		67F04C142B4184B30008F212 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F04C132B4184B30008F212 /* AppDelegate.swift */; };
+		67F04C162B41887F0008F212 /* WhatsNewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F04C152B41887F0008F212 /* WhatsNewView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +52,8 @@
 		674985402B40F4BF00280B58 /* ContactsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsView.swift; sourceTree = "<group>"; };
 		674985422B40F56500280B58 /* GivePermissionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GivePermissionView.swift; sourceTree = "<group>"; };
 		674985442B410F8D00280B58 /* AccessDeniedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessDeniedView.swift; sourceTree = "<group>"; };
+		67F04C132B4184B30008F212 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		67F04C152B41887F0008F212 /* WhatsNewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatsNewView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +102,7 @@
 		67425E4B2B3DDE0100AE9F9C /* MyFriendsFocus */ = {
 			isa = PBXGroup;
 			children = (
+				67F04C152B41887F0008F212 /* WhatsNewView.swift */,
 				674985422B40F56500280B58 /* GivePermissionView.swift */,
 				674985402B40F4BF00280B58 /* ContactsView.swift */,
 				67425E4C2B3DDE0100AE9F9C /* MyFriendsFocusApp.swift */,
@@ -108,6 +113,7 @@
 				67241F572B3F4815005830C6 /* ContactInfoViewModel.swift */,
 				6749853E2B40DE6700280B58 /* ImageView.swift */,
 				674985442B410F8D00280B58 /* AccessDeniedView.swift */,
+				67F04C132B4184B30008F212 /* AppDelegate.swift */,
 			);
 			path = MyFriendsFocus;
 			sourceTree = "<group>";
@@ -251,8 +257,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				6749853F2B40DE6700280B58 /* ImageView.swift in Sources */,
+				67F04C162B41887F0008F212 /* WhatsNewView.swift in Sources */,
 				67425E4F2B3DDE0100AE9F9C /* ContentView.swift in Sources */,
 				67241F582B3F4816005830C6 /* ContactInfoViewModel.swift in Sources */,
+				67F04C142B4184B30008F212 /* AppDelegate.swift in Sources */,
 				674985412B40F4BF00280B58 /* ContactsView.swift in Sources */,
 				67425E772B3DE57300AE9F9C /* ContactManager.swift in Sources */,
 				67425E4D2B3DDE0100AE9F9C /* MyFriendsFocusApp.swift in Sources */,
