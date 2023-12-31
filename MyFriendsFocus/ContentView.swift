@@ -14,21 +14,49 @@ struct ContentView: View {
     
     
     var body: some View {
-        
-        switch authManager.accessGrantedContacts{
-        case .notDetermined:
-            GivePermissionContactsView(authManager: authManager)
-        case .restricted:
+        //TODO: MAKE UNIVERSAL VIEW FOR TEXT AND DIVIDER!
+        switch (authManager.accessGrantedContacts, authManager.accessGrantedFocus) {
+        case (.notDetermined, .notDetermined) :
+            VStack{
+                Text("Предоставление доступа: ")
+                    .font(.headline)
+                Divider()
+                GivePermissionContactsView(authManager: authManager)
+                GivePermissionFocusView(authManager: authManager)
+            }
+            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
+        case (.notDetermined, .authorized) :
+            VStack{
+                Text("Предоставление доступа: ")
+                    .font(.headline)
+                Divider()
+                GivePermissionContactsView(authManager: authManager)
+            }
+            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
+            
+        case (.authorized, .notDetermined) :
+            VStack{
+                Text("Предоставление доступа: ")
+                    .font(.headline)
+                Divider()
+                GivePermissionFocusView(authManager: authManager)
+            }
+            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
+        case (.restricted, .restricted),
+            (.denied, .denied),
+            (.restricted, .denied),
+            (.denied, .restricted),
+            (.restricted, .authorized),
+            (.denied, .authorized),
+            (.authorized, .denied),
+            (.authorized, .restricted):
+            //war crime commited
             AccessDeniedView()
-        case .denied:
-            AccessDeniedView()
-        case .authorized:
-            ContactsView(contactManager: ContactManager(store: authManager.store))
+        case (.authorized, .authorized):
+            ContactsView(contactManager: ContactManager(store: authManager.store), focusManager: FocusManager(statusCentre: authManager.statusCentre))
         default:
             GivePermissionContactsView(authManager: authManager)
         }
-
-
         
     }
 

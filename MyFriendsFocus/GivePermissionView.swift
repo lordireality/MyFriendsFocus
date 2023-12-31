@@ -28,7 +28,7 @@ struct GivePermissionFocusView: View {
     
     var body: some View {
         VStack {
-            Image(uiImage: UIImage(named: "ContactThumbnail") ?? UIImage())
+            Image(uiImage: UIImage(named: "FocusThumbnail") ?? UIImage())
             Text("Для работы приложения, необходимо предоставить доступ к состоянию фокусировки вашего устройства")
                 .multilineTextAlignment(.center)
             Button("Предоставить разрешение", action: authManager.requestAccessFocus)

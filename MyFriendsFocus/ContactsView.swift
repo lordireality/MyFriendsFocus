@@ -12,6 +12,7 @@ struct ContactsView: View {
     
     
     @StateObject var contactManager:ContactManager
+    @StateObject var focusManager:FocusManager
     
     var body: some View {
         VStack {
