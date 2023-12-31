@@ -7,38 +7,28 @@
 
 import SwiftUI
 import Foundation
-import Contacts
 
 struct ContentView: View {
-    // StateObject нужен для хранения классов, за которыми View будет наблюдать и автоматически перерисовывать ui если наблюдаемые параметры изменились
-    @StateObject private var viewModel = ContactManager()
+    //роутинг я пока не проходил, поэтому вью перерисовываются от изменения в менеджере доступа к контактам
+    @StateObject private var authManager = AuthManager()
     
-    
-    @State private var testValue = false
     var body: some View {
-        VStack {
-            Text(testValue.description)
-            Button {
-                testValue.toggle()
-            } label: {
-                Text("Change Value, Right now its \(testValue.description)")
-            }
-            // Сделали подписку на этот массив, теперь всегда при изменении этого параметра, Table будет перерисовываться
-            Table(viewModel.contactData){
-                TableColumn("My Contacts"){ contact in
-                    HStack{
-                        ContactImage(contact: contact)
-                        Text(contact.fullName)
-                    }
-                }
-                
-            }
+        switch authManager.accessGranted {
+        case .notDetermined:
+            GivePermissionView(authManager: authManager);
+        case .restricted:
+            AccessDeniedView();
+        case .denied:
+            AccessDeniedView();
+        case .authorized:
+            ContactsView(contactManager: ContactManager(store: authManager.store));
+        default:
+            GivePermissionView(authManager: authManager);
         }
+
+
+        
     }
     
 
-}
-
-#Preview {
-    ContentView()
 }

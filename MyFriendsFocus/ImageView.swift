@@ -13,21 +13,19 @@ struct ContactImage: View {
     var body : some View {
         if let data = contact.profilePicData,
            let image = UIImage(data: data){
-           beatifulImg(uiImg: image)
-       } else if let image = UIImage(named: "ContactThumbnail"){
-           beatifulImg(uiImg: image)
-       }
-    }
-    private func beatifulImg(uiImg: UIImage) -> some View{
-        Group{
-            Image(uiImage: uiImg)
+            Image(uiImage: image)
                 .resizable()
                 .scaledToFill()
                 .frame(width: 50, height: 50)
                 .cornerRadius(15)
-        }
+        } else {
+            Image(systemName: "person.crop.circle")
+                .resizable()
+               .scaledToFill()
+               .frame(width: 50, height: 50)
+               .cornerRadius(15)
+       }
     }
-    
 }
 
 

@@ -9,9 +9,6 @@ import SwiftUI
 
 @main
 struct MyFriendsFocusApp: App {
-    
-
-
     var body: some Scene {
         WindowGroup {
             ContentView().preferredColorScheme(.dark)

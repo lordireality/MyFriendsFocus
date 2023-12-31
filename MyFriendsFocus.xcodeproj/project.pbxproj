@@ -14,6 +14,9 @@
 		67425E542B3DDE0400AE9F9C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 67425E532B3DDE0400AE9F9C /* Preview Assets.xcassets */; };
 		67425E772B3DE57300AE9F9C /* ContactManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67425E762B3DE57300AE9F9C /* ContactManager.swift */; };
 		6749853F2B40DE6700280B58 /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6749853E2B40DE6700280B58 /* ImageView.swift */; };
+		674985412B40F4BF00280B58 /* ContactsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 674985402B40F4BF00280B58 /* ContactsView.swift */; };
+		674985432B40F56500280B58 /* GivePermissionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 674985422B40F56500280B58 /* GivePermissionView.swift */; };
+		674985452B410F8D00280B58 /* AccessDeniedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 674985442B410F8D00280B58 /* AccessDeniedView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +47,9 @@
 		67425E632B3DDE0400AE9F9C /* MyFriendsFocusUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyFriendsFocusUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		67425E762B3DE57300AE9F9C /* ContactManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactManager.swift; sourceTree = "<group>"; };
 		6749853E2B40DE6700280B58 /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
+		674985402B40F4BF00280B58 /* ContactsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsView.swift; sourceTree = "<group>"; };
+		674985422B40F56500280B58 /* GivePermissionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GivePermissionView.swift; sourceTree = "<group>"; };
+		674985442B410F8D00280B58 /* AccessDeniedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessDeniedView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +98,8 @@
 		67425E4B2B3DDE0100AE9F9C /* MyFriendsFocus */ = {
 			isa = PBXGroup;
 			children = (
+				674985422B40F56500280B58 /* GivePermissionView.swift */,
+				674985402B40F4BF00280B58 /* ContactsView.swift */,
 				67425E4C2B3DDE0100AE9F9C /* MyFriendsFocusApp.swift */,
 				67425E4E2B3DDE0100AE9F9C /* ContentView.swift */,
 				67425E502B3DDE0400AE9F9C /* Assets.xcassets */,
@@ -99,6 +107,7 @@
 				67425E762B3DE57300AE9F9C /* ContactManager.swift */,
 				67241F572B3F4815005830C6 /* ContactInfoViewModel.swift */,
 				6749853E2B40DE6700280B58 /* ImageView.swift */,
+				674985442B410F8D00280B58 /* AccessDeniedView.swift */,
 			);
 			path = MyFriendsFocus;
 			sourceTree = "<group>";
@@ -244,8 +253,11 @@
 				6749853F2B40DE6700280B58 /* ImageView.swift in Sources */,
 				67425E4F2B3DDE0100AE9F9C /* ContentView.swift in Sources */,
 				67241F582B3F4816005830C6 /* ContactInfoViewModel.swift in Sources */,
+				674985412B40F4BF00280B58 /* ContactsView.swift in Sources */,
 				67425E772B3DE57300AE9F9C /* ContactManager.swift in Sources */,
 				67425E4D2B3DDE0100AE9F9C /* MyFriendsFocusApp.swift in Sources */,
+				674985432B40F56500280B58 /* GivePermissionView.swift in Sources */,
+				674985452B410F8D00280B58 /* AccessDeniedView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
