@@ -14,8 +14,10 @@ class ContactManager: ObservableObject{
     var resp = false
     ///if exception on fectch contacts was thrown, text will be placed here
     var ex:String? = nil
+    //Store
+    var store: CNContactStore = CNContactStore()
     ///Fetches contacts from devies.
-    func fetchContacts(store: CNContactStore){
+    func fetchContacts(){
         DispatchQueue.main.async {
             self.contactData.removeAll()
             let keys = [CNContactGivenNameKey, CNContactFamilyNameKey, CNContactMiddleNameKey, CNContactThumbnailImageDataKey]
@@ -24,7 +26,7 @@ class ContactManager: ObservableObject{
                 //TODO:
                 //This method should not be called on the main thread as it may lead to UI unresponsiveness.
                 //WTF???
-                try store.enumerateContacts(with: request) { contact, stop in
+                try self.store.enumerateContacts(with: request) { contact, stop in
                     self.contactData.append(ContactInfo(fullName: "\(contact.familyName) \(contact.givenName) \(contact.middleName)", profilePicData:  contact.thumbnailImageData))
                     self.resp = true
                 }
@@ -36,7 +38,8 @@ class ContactManager: ObservableObject{
         }
     }
     init(store: CNContactStore){
-        fetchContacts(store: store)
+        self.store = store
+        fetchContacts()
     }
 }
 ///AuthManager

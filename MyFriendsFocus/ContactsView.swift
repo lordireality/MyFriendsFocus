@@ -23,6 +23,8 @@ struct ContactsView: View {
                     }
                 }
                 
+            }.refreshable {
+                contactManager.fetchContacts()
             }
         }
     }
