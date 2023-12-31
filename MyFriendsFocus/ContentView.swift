@@ -9,39 +9,16 @@ import SwiftUI
 import Foundation
 
 struct ContentView: View {
-    //роутинг я пока не проходил, поэтому вью перерисовываются от изменения в менеджере доступа к контактам
     @StateObject private var authManager = AuthManager()
     
-    
     var body: some View {
-        //TODO: MAKE UNIVERSAL VIEW FOR TEXT AND DIVIDER!
         switch (authManager.accessGrantedContacts, authManager.accessGrantedFocus) {
         case (.notDetermined, .notDetermined) :
-            VStack{
-                Text("Предоставление доступа: ")
-                    .font(.headline)
-                Divider()
-                GivePermissionContactsView(authManager: authManager)
-                GivePermissionFocusView(authManager: authManager)
-            }
-            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
+            RequestAccessView(viewType: AccessViewType.Both)
         case (.notDetermined, .authorized) :
-            VStack{
-                Text("Предоставление доступа: ")
-                    .font(.headline)
-                Divider()
-                GivePermissionContactsView(authManager: authManager)
-            }
-            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
-            
+            RequestAccessView(viewType: AccessViewType.Contacts)
         case (.authorized, .notDetermined) :
-            VStack{
-                Text("Предоставление доступа: ")
-                    .font(.headline)
-                Divider()
-                GivePermissionFocusView(authManager: authManager)
-            }
-            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
+            RequestAccessView(viewType: AccessViewType.Focus)
         case (.restricted, .restricted),
             (.denied, .denied),
             (.restricted, .denied),
@@ -57,6 +34,32 @@ struct ContentView: View {
         default:
             GivePermissionContactsView(authManager: authManager)
         }
+        
+    }
+    private func RequestAccessView(viewType: AccessViewType) -> some View{
+        VStack{
+            Text("Предоставление доступа: ")
+                .font(.headline)
+            Text("Для работы приложения, необходимо предоставить следующие разрешения:")
+            Divider()
+            if viewType == AccessViewType.Both{
+                GivePermissionContactsView(authManager: authManager)
+                Divider()
+                GivePermissionFocusView(authManager: authManager)
+            } else if viewType == AccessViewType.Contacts{
+                GivePermissionContactsView(authManager: authManager)
+            } else if viewType == AccessViewType.Focus{
+                GivePermissionFocusView(authManager: authManager)
+            }
+            
+        }
+        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
+    }
+    
+    private enum AccessViewType{
+        case Both
+        case Contacts
+        case Focus
         
     }
 

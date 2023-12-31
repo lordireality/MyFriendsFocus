@@ -15,9 +15,9 @@ struct GivePermissionContactsView: View {
     var body: some View {
         VStack {
             Image(uiImage: UIImage(named: "ContactThumbnail") ?? UIImage())
-            Text("Для работы приложения, необходимо предоставить доступ к контактам\n\nПриложение не хранит информацию о ваших контактах")
+            Text("Доступ к контактам")
                 .multilineTextAlignment(.center)
-            Button("Предоставить разрешение", action: authManager.requestAccessContacts)
+            Button("Предоставить разрешение к контактам", action: authManager.requestAccessContacts)
                 .buttonStyle(.bordered)
         }
     }
@@ -29,9 +29,9 @@ struct GivePermissionFocusView: View {
     var body: some View {
         VStack {
             Image(uiImage: UIImage(named: "FocusThumbnail") ?? UIImage())
-            Text("Для работы приложения, необходимо предоставить доступ к состоянию фокусировки вашего устройства")
+            Text("Доступ к состоянию фокусировки вашего устройства")
                 .multilineTextAlignment(.center)
-            Button("Предоставить разрешение", action: authManager.requestAccessFocus)
+            Button("Предоставить разрешение к состоянию фокусировки", action: authManager.requestAccessFocus)
                 .buttonStyle(.bordered)
         }
     }
