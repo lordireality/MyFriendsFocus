@@ -11,13 +11,10 @@ import Foundation
 struct ContentView: View {
     //роутинг я пока не проходил, поэтому вью перерисовываются от изменения в менеджере доступа к контактам
     @StateObject private var authManager = AuthManager()
-    let defaults = UserDefaults.standard
-    @State var showingFirstLauch:Bool = UserDefaults.standard.bool(forKey: "FirstAppLaunch")
+    
     
     var body: some View {
-        HStack{}.sheet(isPresented: $showingFirstLauch, onDismiss: SetFirstLaunchStateFalse){
-            WhatsNewView()
-        }
+        
         switch authManager.accessGrantedContacts{
         case .notDetermined:
             GivePermissionContactsView(authManager: authManager)
@@ -34,8 +31,6 @@ struct ContentView: View {
 
         
     }
-    func SetFirstLaunchStateFalse(){
-        defaults.set(false, forKey: "FirstAppLaunch")
-    }
+
 
 }

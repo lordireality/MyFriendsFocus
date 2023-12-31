@@ -10,10 +10,16 @@ import SwiftUI
 @main
 struct MyFriendsFocusApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
+    let defaults = UserDefaults.standard
+    @State var showingFirstLauch:Bool = UserDefaults.standard.bool(forKey: "FirstAppLaunch")
     var body: some Scene {
         WindowGroup {
-            ContentView().preferredColorScheme(.dark)
-            
+            ContentView().preferredColorScheme(.dark).sheet(isPresented: $showingFirstLauch, onDismiss: SetFirstLaunchStateFalse){
+                WhatsNewView()
+            }
         }
+    }
+    func SetFirstLaunchStateFalse(){
+        defaults.set(false, forKey: "FirstAppLaunch")
     }
 }
