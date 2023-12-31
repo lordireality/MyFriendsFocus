@@ -14,8 +14,10 @@ class FocusManager: ObservableObject{
     @Published var currentDeviceFocused = false
     
     func updateFocusState(){
-        //получаем состояние фокусировки. Если инф-ция не получена, считаем что устройство не в фокусе
-        self.currentDeviceFocused = self.statusCentre.focusStatus.isFocused ?? false
+        DispatchQueue.main.async {
+            //получаем состояние фокусировки. Если инф-ция не получена, считаем что устройство не в фокусе
+            self.currentDeviceFocused = self.statusCentre.focusStatus.isFocused ?? false
+        }
     }
     
     init(statusCentre: INFocusStatusCenter){
@@ -90,30 +92,6 @@ class AuthManager: ObservableObject{
                 self.checkAccessFocus()
             }
         }
-    }
-    
-    
-    
-    
-    ///Is access to contacts granted
-    @available(*, deprecated)
-    @Published var accessGranted:CNAuthorizationStatus = .notDetermined
-    
-    @available(*, deprecated)
-    func checkAcess(){
-        accessGranted = CNContactStore.authorizationStatus(for: .contacts)
-    }
-    
-    ///Requests access to CNContactStore
-    @available(*, deprecated)
-    func requestAccess(){
-        DispatchQueue.main.async {
-            self.store.requestAccess(for: .contacts) { granted, error in
-                //проверка что гой не на наебал на акцес
-                self.checkAcess()
-            }
-        }
-        
     }
     
     init() {
