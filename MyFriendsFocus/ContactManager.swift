@@ -23,34 +23,21 @@ class ContactManager: ObservableObject{
         let store = CNContactStore()
         store.requestAccess(for: .contacts) { granted, error in
             if granted {
-                //sheeesh, CN naming and this stuff, actually looks like Microsoft ActiveDirectory....... and working almost same...
-                let keys = [CNContactGivenNameKey, CNContactFamilyNameKey, CNContactMiddleNameKey, CNContactThumbnailImageDataKey]
-                let request = CNContactFetchRequest(keysToFetch: keys as [CNKeyDescriptor])
-                do {
-                    //TODO: fix this (it dont impress me, oh no)
-                    //This method should not be called on the main thread as it may lead to UI unresponsiveness.
-                    //мне похуй, на 13 мини не лагает юай. а те у кого телефон ниже советую уволится из макдака либо вообще найти работу бтв там деньги платят
-                    /*
-                     upd. spasibo Vlad, i dont know how to use this...
-                     DispatchQueue.global().async {
-                     DolongNotUiThing()
-                     }
-                     */
-                    try store.enumerateContacts(with: request) { contact, stop in
-                        
-                        //TODO: Add from siri-kit recieve contact focus
-                        //idk how it supposed to work
-                        // Так как теперь массив это элемент, который заставляет перерисовываться ui, то менять массив нужно только через main поток, читай DispatchQueue basics
-                        // Фактически, эта хуйня передает кусок кода, который надо выполнить на определенном потоке, в данном случае на главном, передаем мы замыкание, у гоев это называется лямбда
-                        DispatchQueue.main.async {
-                            self.contactData.append(ContactInfo(fullName: "\(contact.familyName) \(contact.givenName) \(contact.middleName)", profilePicData:  contact.thumbnailImageData, profilePicImg: getImageFromData(data: contact.thumbnailImageData, defaultNamed: "ContactThumbnail")))
+                DispatchQueue.main.async {
+                    let keys = [CNContactGivenNameKey, CNContactFamilyNameKey, CNContactMiddleNameKey, CNContactThumbnailImageDataKey]
+                    let request = CNContactFetchRequest(keysToFetch: keys as [CNKeyDescriptor])
+                    do {
+                        try store.enumerateContacts(with: request) { contact, stop in
+                            
+                            self.contactData.append(ContactInfo(fullName: "\(contact.familyName) \(contact.givenName) \(contact.middleName)", profilePicData:  contact.thumbnailImageData))
+                            
+                            self.resp = true
                         }
-                        self.resp = true
+                    } catch {
+                        self.resp = false
+                        self.ex = "Произошла ошибка при получении контактов: \n \(error)"
+                        
                     }
-                } catch {
-                    self.resp = false
-                    self.ex = "Произошла ошибка при получении контактов: \n \(error)"
-                    
                 }
             } else {
                 self.resp = false
