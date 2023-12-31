@@ -22,7 +22,8 @@ struct WhatsNewView: View {
                     .font(.largeTitle)
             }
             Divider()
-            Text("1. Пока ничего, но мы стараемся").multilineTextAlignment(.center)
+            Text("1. Пока ничего, но мы стараемся")
+            .multilineTextAlignment(.center)
             VStack{
                 Divider()
                 if let version = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String {
@@ -36,7 +37,8 @@ struct WhatsNewView: View {
                 .buttonStyle(.bordered)
             }
             .frame(maxHeight: .infinity, alignment: .bottom)
-        }.frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
+        }
+        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
     }
     
     

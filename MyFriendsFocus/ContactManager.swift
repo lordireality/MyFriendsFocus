@@ -7,9 +7,21 @@
 
 import Foundation
 import Contacts
+import Intents
 
-class FocusManager{
+class FocusManager: ObservableObject{
+    var statusCentre:INFocusStatusCenter = INFocusStatusCenter.default
+    @Published var currentDeviceFocused = false
     
+    func updateFocusState(){
+        //получаем состояние фокусировки. Если инф-ция не получена, считаем что устройство не в фокусе
+        self.currentDeviceFocused = self.statusCentre.focusStatus.isFocused ?? false
+    }
+    
+    init(statusCentre: INFocusStatusCenter){
+        self.statusCentre = statusCentre
+        updateFocusState()
+    }
 }
 
 
@@ -52,14 +64,48 @@ class ContactManager: ObservableObject{
 class AuthManager: ObservableObject{
     ///Contact store
     var store: CNContactStore = CNContactStore()
+    var statusCentre:INFocusStatusCenter = INFocusStatusCenter.default
+    @Published var accessGrantedContacts:CNAuthorizationStatus = .notDetermined
+    @Published var accessGrantedFocus:INFocusStatusAuthorizationStatus = .notDetermined
+    
+    func checkAccessContacts(){
+        self.accessGrantedContacts = CNContactStore.authorizationStatus(for: .contacts)
+    }
+    
+    func checkAccessFocus(){
+        self.accessGrantedFocus = self.statusCentre.authorizationStatus
+    }
+    
+    func requestAccessContacts(){
+        DispatchQueue.main.async {
+            self.store.requestAccess(for: .contacts) { granted, error in
+               self.checkAccessContacts()
+            }
+        }
+    }
+    
+    func requestAccessFocus(){
+        DispatchQueue.main.async {
+            self.statusCentre.requestAuthorization { status in
+                self.checkAccessFocus()
+            }
+        }
+    }
+    
+    
+    
+    
     ///Is access to contacts granted
+    @available(*, deprecated)
     @Published var accessGranted:CNAuthorizationStatus = .notDetermined
     
+    @available(*, deprecated)
     func checkAcess(){
         accessGranted = CNContactStore.authorizationStatus(for: .contacts)
     }
     
     ///Requests access to CNContactStore
+    @available(*, deprecated)
     func requestAccess(){
         DispatchQueue.main.async {
             self.store.requestAccess(for: .contacts) { granted, error in
