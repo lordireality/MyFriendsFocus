@@ -14,8 +14,9 @@ import SwiftUI
 struct ContentView: View {
     @StateObject private var authManager = AuthManager()
     let defaults = UserDefaults.standard
-    @State var showingFirstLauch:Bool = UserDefaults.standard.bool(forKey: "FirstAppLaunch")
+    @State var showingFirstLauch:Bool = UserDefaults.standard.bool(forKey: UserDefaults.Keys.FirstAppLaunch.rawValue)
     var body: some View {
+        
         //small костыль, что бы в любом случае было отображена вью в случае перерисовок
         HStack{}
             .sheet(isPresented: $showingFirstLauch, onDismiss: SetFirstLaunchStateFalse){
@@ -36,7 +37,7 @@ struct ContentView: View {
         }
     }
     func SetFirstLaunchStateFalse(){
-        defaults.set(false, forKey: "FirstAppLaunch")
+        defaults.set(false, forKey: UserDefaults.Keys.FirstAppLaunch.rawValue)
     }
     private func RequestAccessView(viewType: AccessViewType) -> some View{
         VStack{

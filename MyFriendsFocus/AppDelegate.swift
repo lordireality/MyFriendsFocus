@@ -12,9 +12,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
         
-        let defaults = UserDefaults.standard
-        if defaults.string(forKey: "FirstAppLaunch") == nil {
-            defaults.register(defaults: ["FirstAppLaunch" : true])
+        if UserDefaults.standard.string(forKey: UserDefaults.Keys.FirstAppLaunch.rawValue) == nil {
+            UserDefaults.standard.set(true, forKey: UserDefaults.Keys.FirstAppLaunch.rawValue)
         }
         return true
     }

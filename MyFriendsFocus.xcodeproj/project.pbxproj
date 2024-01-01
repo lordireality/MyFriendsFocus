@@ -23,6 +23,7 @@
 		67F04C8C2B4337940008F212 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F04C8B2B4337940008F212 /* SettingsView.swift */; };
 		67F04C8E2B4337A70008F212 /* DebugView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F04C8D2B4337A70008F212 /* DebugView.swift */; };
 		67F04C902B4344130008F212 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F04C8F2B4344130008F212 /* MainView.swift */; };
+		67F04C922B4355190008F212 /* UserDefaultsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F04C912B4355190008F212 /* UserDefaultsExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 		67F04C8B2B4337940008F212 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		67F04C8D2B4337A70008F212 /* DebugView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugView.swift; sourceTree = "<group>"; };
 		67F04C8F2B4344130008F212 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		67F04C912B4355190008F212 /* UserDefaultsExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +112,7 @@
 		67425E4B2B3DDE0100AE9F9C /* MyFriendsFocus */ = {
 			isa = PBXGroup;
 			children = (
+				67F04C912B4355190008F212 /* UserDefaultsExtension.swift */,
 				67F04C8B2B4337940008F212 /* SettingsView.swift */,
 				67F04C152B41887F0008F212 /* WhatsNewView.swift */,
 				674985422B40F56500280B58 /* GivePermissionView.swift */,
@@ -278,6 +281,7 @@
 				67425E772B3DE57300AE9F9C /* ContactManager.swift in Sources */,
 				67425E4D2B3DDE0100AE9F9C /* MyFriendsFocusApp.swift in Sources */,
 				67F04C8A2B4333490008F212 /* HapticManager.swift in Sources */,
+				67F04C922B4355190008F212 /* UserDefaultsExtension.swift in Sources */,
 				67F04C8C2B4337940008F212 /* SettingsView.swift in Sources */,
 				67F04C8E2B4337A70008F212 /* DebugView.swift in Sources */,
 				674985432B40F56500280B58 /* GivePermissionView.swift in Sources */,

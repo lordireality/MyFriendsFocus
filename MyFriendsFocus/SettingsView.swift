@@ -12,10 +12,12 @@ struct SettingsView: View {
     
     var body : some View {
         VStack{
-            /*Button("Очистить UserDefaults", action: authManager.requestAccessFocus)
-                .buttonStyle(.bordered)*/
+            //TODO: Addloader and handler
+            Button("Очистить UserDefaults", action: UserDefaults.standard.reset)
+                .buttonStyle(.bordered)
             
         }
-        .frame(maxWidth: .infinity, alignment: .leading)
+        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
     }
+
 }
