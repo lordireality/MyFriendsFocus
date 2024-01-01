@@ -16,7 +16,8 @@ class FocusManager: ObservableObject{
     func updateFocusState(){
         DispatchQueue.main.async {
             //получаем состояние фокусировки. Если инф-ция не получена, считаем что устройство не в фокусе
-            self.currentDeviceFocused = self.statusCentre.focusStatus.isFocused ?? false
+            //p.s. Очень жидкий надрист вышел. Нужен Communication Notifications Capability для работы
+            self.currentDeviceFocused = self.statusCentre.focusStatus.isFocused!
         }
     }
     
@@ -30,6 +31,8 @@ class FocusManager: ObservableObject{
 class ContactManager: ObservableObject{
     ///array of fetched contacts
     @Published var contactData:[ContactInfo] = []
+    ///this device contact
+    var thisDeviceContact:ContactInfo = ContactInfo(fullName: "Вы", isFocus: false, profilePicData: nil)
     ///Is fetching contacts was succesfull
     var resp = false
     ///if exception on fectch contacts was thrown, text will be placed here
@@ -57,6 +60,8 @@ class ContactManager: ObservableObject{
             }
         }
     }
+    
+    
     init(store: CNContactStore){
         self.store = store
         fetchContacts()

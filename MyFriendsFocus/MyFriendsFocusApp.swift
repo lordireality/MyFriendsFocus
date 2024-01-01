@@ -15,6 +15,7 @@ struct MyFriendsFocusApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView().preferredColorScheme(.dark).sheet(isPresented: $showingFirstLauch, onDismiss: SetFirstLaunchStateFalse){
+                //TODO: Fix не открывается из за изменения паблишед переменных происходит авто-дисмис
                 WhatsNewView()
             }
         }
