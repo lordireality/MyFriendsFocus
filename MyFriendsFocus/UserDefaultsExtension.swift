@@ -11,6 +11,7 @@ extension UserDefaults {
 
     enum Keys: String, CaseIterable {
         case FirstAppLaunch
+        case thisDeviceContactIdentifier
     }
     func reset() {
         Keys.allCases.forEach { removeObject(forKey: $0.rawValue) }

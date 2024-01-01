@@ -9,8 +9,10 @@ import Foundation
 
 /// Model for passing data to content view from Manager
 struct ContactInfo : Identifiable {
-    ///
+    ///local id
     let id = UUID()
+    ///identifier from CNContactStore
+    var identifier: String = "";
     ///FullName of a contact to be displayed
     var fullName:String = "";
     ///Is specified contact have applied focus

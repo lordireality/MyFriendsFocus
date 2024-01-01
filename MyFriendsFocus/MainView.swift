@@ -15,7 +15,7 @@ struct MainView: View {
                  .tabItem {
                      Label("#Contacts", systemImage: "person")
                  }
-             SettingsView(isPresented: .constant(true))
+             SettingsView()
                  .tabItem {
                      Label("#Settings", systemImage: "gear")
                  }

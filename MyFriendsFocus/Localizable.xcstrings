@@ -205,6 +205,22 @@
         }
       }
     },
+    "#SelectMyCard" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Select my contact"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Выбрать мой контакт"
+          }
+        }
+      }
+    },
     "#Settings" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -295,30 +311,6 @@
     },
     "My Contacts" : {
 
-    },
-    "Выбранный контакт: %@ %@" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Выбранный контакт: %1$@ %2$@"
-          }
-        }
-      }
-    },
-    "Выбрать контакт" : {
-
-    },
-    "Токсичность" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "ru" : {
-          "stringUnit" : {
-            "state" : "needs_review",
-            "value" : ""
-          }
-        }
-      }
     }
   },
   "version" : "1.0"
