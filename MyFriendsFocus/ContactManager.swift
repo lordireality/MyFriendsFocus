@@ -17,7 +17,7 @@ class FocusManager: ObservableObject{
         DispatchQueue.main.async {
             //получаем состояние фокусировки. Если инф-ция не получена, считаем что устройство не в фокусе
             //p.s. Очень жидкий надрист вышел. Нужен Communication Notifications Capability для работы
-            self.currentDeviceFocused = self.statusCentre.focusStatus.isFocused!
+            self.currentDeviceFocused = self.statusCentre.focusStatus.isFocused ?? false
         }
     }
     

@@ -14,11 +14,11 @@ struct ContentView: View {
     var body: some View {
         switch (authManager.accessGrantedContacts, authManager.accessGrantedFocus) {
         case (.notDetermined, .notDetermined) :
-            RequestAccessView(viewType: AccessViewType.Both)
+            RequestAccessView(viewType: .Both)
         case (.notDetermined, .authorized) :
-            RequestAccessView(viewType: AccessViewType.Contacts)
+            RequestAccessView(viewType: .Contacts)
         case (.authorized, .notDetermined) :
-            RequestAccessView(viewType: AccessViewType.Focus)
+            RequestAccessView(viewType: .Focus)
         case (.restricted, .restricted),
             (.denied, .denied),
             (.restricted, .denied),
@@ -48,16 +48,16 @@ struct ContentView: View {
                 .font(.headline)
             Text("Для работы приложения, необходимо предоставить следующие разрешения:")
             Divider()
-            if viewType == AccessViewType.Both{
+            switch(viewType){
+                case .Both: 
                 GivePermissionContactsView(authManager: authManager)
                 Divider()
                 GivePermissionFocusView(authManager: authManager)
-            } else if viewType == AccessViewType.Contacts{
+                case .Contacts:
                 GivePermissionContactsView(authManager: authManager)
-            } else if viewType == AccessViewType.Focus{
+                case .Focus:
                 GivePermissionFocusView(authManager: authManager)
             }
-            
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
     }
