@@ -18,7 +18,7 @@ struct WhatsNewView: View {
                 Image(uiImage: UIImage(named: "AppIcon") ?? UIImage())
                     .resizable()
                     .frame(width: 100.0, height: 100.0)
-                Text("Что нового в MyFriendsFocus")
+                Text("#WhatsNew")
                     .font(.largeTitle)
             }
             Divider()
@@ -27,10 +27,10 @@ struct WhatsNewView: View {
             VStack{
                 Divider()
                 if let version = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String {
-                    Text("Версия: \(version)")
+                    Text("#Ver\(version)")
                }
                 Divider()
-                Button("Начать") {
+                Button("#Start") {
                     dismiss()
                 }.font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
                 .cornerRadius(15)
@@ -43,4 +43,7 @@ struct WhatsNewView: View {
     
     
 
+}
+#Preview(){
+    WhatsNewView().environment(\.locale, .init(identifier: "en"))
 }

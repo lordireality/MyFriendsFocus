@@ -25,7 +25,7 @@ struct ContactsView: View {
                             Image(systemName: "powersleep")
                                 .font(.caption)
                                 .foregroundStyle(.purple)
-                            Text("Вы сейчас заглушаете свои уведомления")
+                            Text("#YouSilenced")
                                 .font(.caption)
                                 .foregroundStyle(.purple)
                         }
@@ -47,7 +47,7 @@ struct ContactsView: View {
                                     Image(systemName: "powersleep")
                                         .font(.caption)
                                         .foregroundStyle(.purple)
-                                    Text("Заглушает свои уведомления")
+                                    Text("#ContactSilenced")
                                         .font(.caption)
                                         .foregroundStyle(.purple)
                                 }.frame(maxWidth: .infinity, alignment: .leading)

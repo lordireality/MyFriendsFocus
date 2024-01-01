@@ -13,11 +13,11 @@ struct MainView: View {
          TabView{
              ContactsView(contactManager: ContactManager(store: authManager.store), focusManager: FocusManager(statusCentre: authManager.statusCentre))
                  .tabItem {
-                     Label("Контакты", systemImage: "person")
+                     Label("#Contacts", systemImage: "person")
                  }
-             SettingsView()
+             SettingsView(isPresented: .constant(true))
                  .tabItem {
-                     Label("Настройки", systemImage: "gear")
+                     Label("#Settings", systemImage: "gear")
                  }
          }
     }

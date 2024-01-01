@@ -14,11 +14,11 @@ struct AccessDeniedView: View {
     var body: some View {
         VStack {
             Image(uiImage: UIImage(named: "SettingsThumbnail") ?? UIImage())
-            Text("Доступ к контактам или фокусировке запрещен.")
+            Text("#ContactsFocusDenied")
                 .multilineTextAlignment(.center)
-            Text("Для работы приложения, необходимо предоставить доступ к контактам и состоянию фокусировки устройства")
+            Text("#ContactsFocusDeniedComment")
                 .multilineTextAlignment(.center)
-            Button("Перейти в настройки"){
+            Button("#GotoSettings"){
                 if let url = URL(string: UIApplication.openSettingsURLString) {
                     UIApplication.shared.open(url)
                 }

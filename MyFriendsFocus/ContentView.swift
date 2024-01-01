@@ -41,9 +41,9 @@ struct ContentView: View {
     }
     private func RequestAccessView(viewType: AccessViewType) -> some View{
         VStack{
-            Text("Предоставление доступа: ")
+            Text("#ProvidingAccess")
                 .font(.headline)
-            Text("Для работы приложения, необходимо предоставить следующие разрешения:")
+            Text("#ProvidingAccessComment")
             Divider()
             switch(viewType){
                 case .Both:

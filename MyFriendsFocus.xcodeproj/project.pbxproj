@@ -17,6 +17,7 @@
 		674985412B40F4BF00280B58 /* ContactsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 674985402B40F4BF00280B58 /* ContactsView.swift */; };
 		674985432B40F56500280B58 /* GivePermissionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 674985422B40F56500280B58 /* GivePermissionView.swift */; };
 		674985452B410F8D00280B58 /* AccessDeniedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 674985442B410F8D00280B58 /* AccessDeniedView.swift */; };
+		67609EE92B43632C004FA09E /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 67609EE82B43632C004FA09E /* Localizable.xcstrings */; };
 		67F04C142B4184B30008F212 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F04C132B4184B30008F212 /* AppDelegate.swift */; };
 		67F04C162B41887F0008F212 /* WhatsNewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F04C152B41887F0008F212 /* WhatsNewView.swift */; };
 		67F04C8A2B4333490008F212 /* HapticManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F04C892B4333490008F212 /* HapticManager.swift */; };
@@ -57,6 +58,7 @@
 		674985402B40F4BF00280B58 /* ContactsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsView.swift; sourceTree = "<group>"; };
 		674985422B40F56500280B58 /* GivePermissionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GivePermissionView.swift; sourceTree = "<group>"; };
 		674985442B410F8D00280B58 /* AccessDeniedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessDeniedView.swift; sourceTree = "<group>"; };
+		67609EE82B43632C004FA09E /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		67F04C132B4184B30008F212 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		67F04C152B41887F0008F212 /* WhatsNewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatsNewView.swift; sourceTree = "<group>"; };
 		67F04C892B4333490008F212 /* HapticManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticManager.swift; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 				67F04C892B4333490008F212 /* HapticManager.swift */,
 				67F04C8D2B4337A70008F212 /* DebugView.swift */,
 				67F04C8F2B4344130008F212 /* MainView.swift */,
+				67609EE82B43632C004FA09E /* Localizable.xcstrings */,
 			);
 			path = MyFriendsFocus;
 			sourceTree = "<group>";
@@ -226,7 +229,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
-				Base,
+				ru,
 			);
 			mainGroup = 67425E402B3DDE0100AE9F9C;
 			productRefGroup = 67425E4A2B3DDE0100AE9F9C /* Products */;
@@ -247,6 +250,7 @@
 			files = (
 				67425E542B3DDE0400AE9F9C /* Preview Assets.xcassets in Resources */,
 				67425E512B3DDE0400AE9F9C /* Assets.xcassets in Resources */,
+				67609EE92B43632C004FA09E /* Localizable.xcstrings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
