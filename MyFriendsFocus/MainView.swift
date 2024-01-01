@@ -15,6 +15,10 @@ struct MainView: View {
                  .tabItem {
                      Label("Контакты", systemImage: "person")
                  }
+             SettingsView()
+                 .tabItem {
+                     Label("Настройки", systemImage: "gear")
+                 }
          }
     }
 }

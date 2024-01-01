@@ -11,12 +11,11 @@ import SwiftUI
 struct SettingsView: View {
     
     var body : some View {
-
-            Image(systemName: "person.crop.circle")
-                .resizable()
-               .scaledToFill()
-               .frame(width: 50, height: 50)
-               .cornerRadius(15)
-       
+        VStack{
+            /*Button("Очистить UserDefaults", action: authManager.requestAccessFocus)
+                .buttonStyle(.bordered)*/
+            
+        }
+        .frame(maxWidth: .infinity, alignment: .leading)
     }
 }

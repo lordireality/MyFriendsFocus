@@ -44,6 +44,3 @@ struct WhatsNewView: View {
     
 
 }
-#Preview(){
-    WhatsNewView()
-}
