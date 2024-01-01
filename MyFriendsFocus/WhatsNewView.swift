@@ -13,7 +13,7 @@ struct WhatsNewView: View {
 
 
     var body: some View {
-                VStack {
+        VStack {
             HStack{
                 Image(uiImage: UIImage(named: "AppIcon") ?? UIImage())
                     .resizable()

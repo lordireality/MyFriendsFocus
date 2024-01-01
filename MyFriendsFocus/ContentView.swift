@@ -30,7 +30,13 @@ struct ContentView: View {
             //war crime commited
             AccessDeniedView()
         case (.authorized, .authorized):
-            ContactsView(contactManager: ContactManager(store: authManager.store), focusManager: FocusManager(statusCentre: authManager.statusCentre))
+            TabView{
+                ContactsView(contactManager: ContactManager(store: authManager.store), focusManager: FocusManager(statusCentre: authManager.statusCentre))
+                    .tabItem {
+                        Label("Контакты", systemImage: "person")
+                    }
+            }
+            
         default:
             GivePermissionContactsView(authManager: authManager)
         }
