@@ -22,6 +22,7 @@
 		67F04C8A2B4333490008F212 /* HapticManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F04C892B4333490008F212 /* HapticManager.swift */; };
 		67F04C8C2B4337940008F212 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F04C8B2B4337940008F212 /* SettingsView.swift */; };
 		67F04C8E2B4337A70008F212 /* DebugView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F04C8D2B4337A70008F212 /* DebugView.swift */; };
+		67F04C902B4344130008F212 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F04C8F2B4344130008F212 /* MainView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,7 @@
 		67F04C892B4333490008F212 /* HapticManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticManager.swift; sourceTree = "<group>"; };
 		67F04C8B2B4337940008F212 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		67F04C8D2B4337A70008F212 /* DebugView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugView.swift; sourceTree = "<group>"; };
+		67F04C8F2B4344130008F212 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +125,7 @@
 				67F04C132B4184B30008F212 /* AppDelegate.swift */,
 				67F04C892B4333490008F212 /* HapticManager.swift */,
 				67F04C8D2B4337A70008F212 /* DebugView.swift */,
+				67F04C8F2B4344130008F212 /* MainView.swift */,
 			);
 			path = MyFriendsFocus;
 			sourceTree = "<group>";
@@ -266,6 +269,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6749853F2B40DE6700280B58 /* ImageView.swift in Sources */,
+				67F04C902B4344130008F212 /* MainView.swift in Sources */,
 				67F04C162B41887F0008F212 /* WhatsNewView.swift in Sources */,
 				67425E4F2B3DDE0100AE9F9C /* ContentView.swift in Sources */,
 				67241F582B3F4816005830C6 /* ContactInfoViewModel.swift in Sources */,

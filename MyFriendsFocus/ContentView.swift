@@ -8,39 +8,35 @@
 import SwiftUI
 import Foundation
 
+import Foundation
+import SwiftUI
+
 struct ContentView: View {
     @StateObject private var authManager = AuthManager()
-    
+    let defaults = UserDefaults.standard
+    @State var showingFirstLauch:Bool = UserDefaults.standard.bool(forKey: "FirstAppLaunch")
     var body: some View {
-        switch (authManager.accessGrantedContacts, authManager.accessGrantedFocus) {
-        case (.notDetermined, .notDetermined) :
-            RequestAccessView(viewType: .Both)
-        case (.notDetermined, .authorized) :
-            RequestAccessView(viewType: .Contacts)
-        case (.authorized, .notDetermined) :
-            RequestAccessView(viewType: .Focus)
-        case (.restricted, .restricted),
-            (.denied, .denied),
-            (.restricted, .denied),
-            (.denied, .restricted),
-            (.restricted, .authorized),
-            (.denied, .authorized),
-            (.authorized, .denied),
-            (.authorized, .restricted):
-            //war crime commited
-            AccessDeniedView()
-        case (.authorized, .authorized):
-            TabView{
-                ContactsView(contactManager: ContactManager(store: authManager.store), focusManager: FocusManager(statusCentre: authManager.statusCentre))
-                    .tabItem {
-                        Label("Контакты", systemImage: "person")
-                    }
-            }
-            
-        default:
-            GivePermissionContactsView(authManager: authManager)
+        //small костыль, что бы в любом случае было отображена вью в случае перерисовок
+        HStack{}
+            .sheet(isPresented: $showingFirstLauch, onDismiss: SetFirstLaunchStateFalse){
+            WhatsNewView()
         }
-        
+        if authManager.accessGrantedFocus == .authorized, authManager.accessGrantedContacts == .authorized{
+            MainView(authManager: authManager)
+        } else {
+            switch(authManager.accessGrantedContacts, authManager.accessGrantedFocus){
+                case (.notDetermined, .notDetermined) :
+                    RequestAccessView(viewType: .Both)
+                case (.notDetermined, .authorized) :
+                    RequestAccessView(viewType: .Contacts)
+                case (.authorized, .notDetermined) :
+                    RequestAccessView(viewType: .Focus)
+                default: AccessDeniedView()
+            }
+        }
+    }
+    func SetFirstLaunchStateFalse(){
+        defaults.set(false, forKey: "FirstAppLaunch")
     }
     private func RequestAccessView(viewType: AccessViewType) -> some View{
         VStack{
@@ -49,7 +45,7 @@ struct ContentView: View {
             Text("Для работы приложения, необходимо предоставить следующие разрешения:")
             Divider()
             switch(viewType){
-                case .Both: 
+                case .Both:
                 GivePermissionContactsView(authManager: authManager)
                 Divider()
                 GivePermissionFocusView(authManager: authManager)
@@ -66,8 +62,5 @@ struct ContentView: View {
         case Both
         case Contacts
         case Focus
-        
     }
-
-
 }
