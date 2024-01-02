@@ -171,6 +171,23 @@
         }
       }
     },
+    "#OK" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ok"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Очень хорошо"
+          }
+        }
+      }
+    },
     "#ProvidingAccess" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -255,6 +272,23 @@
         }
       }
     },
+    "#UDCleared" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "User defaults is cleared"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "User Defaults очищены"
+          }
+        }
+      }
+    },
     "#Ver%@" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -309,7 +343,13 @@
     "1. Пока ничего, но мы стараемся" : {
 
     },
+    "Important message" : {
+
+    },
     "My Contacts" : {
+
+    },
+    "OK" : {
 
     }
   },

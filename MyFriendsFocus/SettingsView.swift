@@ -12,14 +12,24 @@ import ContactsUI
 struct SettingsView: View {
     
     @State var showingContactSelect:Bool = false
-    var hapticManager = HapticManager()
+    @State var showingUDAlert:Bool = false
+    let impactFeedback: UIImpactFeedbackGenerator
     var body : some View {
         
         VStack{
             //TODO: Addloader and handler
-            Button("#ClearUD", action: UserDefaults.standard.reset)
-                .buttonStyle(.bordered)
+            Button("#ClearUD"){
+                impactFeedback.impactOccurred()
+                UserDefaults.standard.reset()
+                showingUDAlert = true
+            }
+            .buttonStyle(.bordered)
+            .alert("#UDCleared", isPresented: $showingUDAlert) {
+                Button("#OK", role: .cancel) { }
+            }
+            
             Button("#SelectMyCard"){
+                
                 showingContactSelect = true
             }
             .buttonStyle(.bordered)

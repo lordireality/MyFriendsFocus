@@ -29,7 +29,7 @@ struct ContentView: View {
             WhatsNewView(impactFeedback: impactFeedback)
         }
         if authManager.accessGrantedFocus == .authorized, authManager.accessGrantedContacts == .authorized{
-            MainView(authManager: authManager)
+            MainView(authManager: authManager, impactFeedback: impactFeedback)
         } else {
             switch(authManager.accessGrantedContacts, authManager.accessGrantedFocus){
                 case (.notDetermined, .notDetermined) :

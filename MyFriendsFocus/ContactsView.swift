@@ -13,7 +13,7 @@ struct ContactsView: View {
     
     @StateObject var contactManager:ContactManager
     @StateObject var focusManager:FocusManager
-    var impactFeedback = UIImpactFeedbackGenerator(style: .heavy)
+    let impactFeedback: UIImpactFeedbackGenerator
     
     var body: some View {
         VStack {
@@ -61,10 +61,6 @@ struct ContactsView: View {
                 impactFeedback.impactOccurred()
                 contactManager.fetchContacts()
             }
-        }.onAppear(){
-            impactFeedback.prepare()
         }
     }
-    
-
 }
