@@ -10,7 +10,7 @@ import SwiftUI
 
 struct WhatsNewView: View {
     @Environment(\.dismiss) var dismiss
-
+    let impactFeedback: UIImpactFeedbackGenerator
 
     var body: some View {
         VStack {
@@ -31,6 +31,7 @@ struct WhatsNewView: View {
                }
                 Divider()
                 Button("#Start") {
+                    impactFeedback.impactOccurred()
                     dismiss()
                 }.font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
                 .cornerRadius(15)
@@ -43,7 +44,4 @@ struct WhatsNewView: View {
     
     
 
-}
-#Preview(){
-    WhatsNewView().environment(\.locale, .init(identifier: "en"))
 }

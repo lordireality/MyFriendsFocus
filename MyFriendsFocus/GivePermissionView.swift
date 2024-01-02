@@ -11,34 +11,39 @@ import SwiftUI
 struct GivePermissionContactsView: View {
     
     let authManager: AuthManager
+    let impactFeedback: UIImpactFeedbackGenerator
     
     var body: some View {
         VStack {
             Image(uiImage: UIImage(named: "ContactThumbnail") ?? UIImage())
             Text("#ContactsAccess")
                 .multilineTextAlignment(.center)
-            Button("#ContactGrant", action: authManager.requestAccessContacts)
-                .buttonStyle(.bordered)
+            Button("#ContactGrant"){
+                impactFeedback.impactOccurred()
+                authManager.requestAccessContacts()
+            }
+            .buttonStyle(.bordered)
         }
     }
 }
 struct GivePermissionFocusView: View {
     
     let authManager: AuthManager
+    let impactFeedback: UIImpactFeedbackGenerator
     
     var body: some View {
         VStack {
             Image(uiImage: UIImage(named: "FocusThumbnail") ?? UIImage())
             Text("#FocusAccess")
                 .multilineTextAlignment(.center)
-            Button("#FocusGrant", action: authManager.requestAccessFocus)
-                .buttonStyle(.bordered)
+            Button("#FocusGrant"){
+                impactFeedback.impactOccurred()
+                authManager.requestAccessFocus()
+            }
+            .buttonStyle(.bordered)
         }
     }
 }
 
 
 
-#Preview(){
-    GivePermissionContactsView(authManager: AuthManager())
-}

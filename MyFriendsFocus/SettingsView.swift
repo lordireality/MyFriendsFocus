@@ -12,7 +12,7 @@ import ContactsUI
 struct SettingsView: View {
     
     @State var showingContactSelect:Bool = false
-    
+    var hapticManager = HapticManager()
     var body : some View {
         
         VStack{

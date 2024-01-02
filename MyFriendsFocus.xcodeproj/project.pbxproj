@@ -20,7 +20,6 @@
 		67609EE92B43632C004FA09E /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 67609EE82B43632C004FA09E /* Localizable.xcstrings */; };
 		67F04C142B4184B30008F212 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F04C132B4184B30008F212 /* AppDelegate.swift */; };
 		67F04C162B41887F0008F212 /* WhatsNewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F04C152B41887F0008F212 /* WhatsNewView.swift */; };
-		67F04C8A2B4333490008F212 /* HapticManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F04C892B4333490008F212 /* HapticManager.swift */; };
 		67F04C8C2B4337940008F212 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F04C8B2B4337940008F212 /* SettingsView.swift */; };
 		67F04C8E2B4337A70008F212 /* DebugView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F04C8D2B4337A70008F212 /* DebugView.swift */; };
 		67F04C902B4344130008F212 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F04C8F2B4344130008F212 /* MainView.swift */; };
@@ -61,7 +60,6 @@
 		67609EE82B43632C004FA09E /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		67F04C132B4184B30008F212 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		67F04C152B41887F0008F212 /* WhatsNewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatsNewView.swift; sourceTree = "<group>"; };
-		67F04C892B4333490008F212 /* HapticManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticManager.swift; sourceTree = "<group>"; };
 		67F04C8B2B4337940008F212 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		67F04C8D2B4337A70008F212 /* DebugView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugView.swift; sourceTree = "<group>"; };
 		67F04C8F2B4344130008F212 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -128,7 +126,6 @@
 				6749853E2B40DE6700280B58 /* ImageView.swift */,
 				674985442B410F8D00280B58 /* AccessDeniedView.swift */,
 				67F04C132B4184B30008F212 /* AppDelegate.swift */,
-				67F04C892B4333490008F212 /* HapticManager.swift */,
 				67F04C8D2B4337A70008F212 /* DebugView.swift */,
 				67F04C8F2B4344130008F212 /* MainView.swift */,
 				67609EE82B43632C004FA09E /* Localizable.xcstrings */,
@@ -284,7 +281,6 @@
 				674985412B40F4BF00280B58 /* ContactsView.swift in Sources */,
 				67425E772B3DE57300AE9F9C /* ContactManager.swift in Sources */,
 				67425E4D2B3DDE0100AE9F9C /* MyFriendsFocusApp.swift in Sources */,
-				67F04C8A2B4333490008F212 /* HapticManager.swift in Sources */,
 				67F04C922B4355190008F212 /* UserDefaultsExtension.swift in Sources */,
 				67F04C8C2B4337940008F212 /* SettingsView.swift in Sources */,
 				67F04C8E2B4337A70008F212 /* DebugView.swift in Sources */,

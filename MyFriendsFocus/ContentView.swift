@@ -15,23 +15,29 @@ struct ContentView: View {
     @StateObject private var authManager = AuthManager()
     let defaults = UserDefaults.standard
     @State var showingFirstLauch:Bool = UserDefaults.standard.bool(forKey: UserDefaults.Keys.FirstAppLaunch.rawValue)
+    let impactFeedback = UIImpactFeedbackGenerator(style: .heavy)
+    
+    init() {
+        impactFeedback.prepare()
+    }
+    
     var body: some View {
         
         //small костыль, что бы в любом случае было отображена вью в случае перерисовок
         HStack{}
             .sheet(isPresented: $showingFirstLauch, onDismiss: SetFirstLaunchStateFalse){
-            WhatsNewView()
+            WhatsNewView(impactFeedback: impactFeedback)
         }
         if authManager.accessGrantedFocus == .authorized, authManager.accessGrantedContacts == .authorized{
             MainView(authManager: authManager)
         } else {
             switch(authManager.accessGrantedContacts, authManager.accessGrantedFocus){
                 case (.notDetermined, .notDetermined) :
-                    RequestAccessView(viewType: .Both)
+                    RequestAccessView(viewType: .Both, impactFeedback: impactFeedback)
                 case (.notDetermined, .authorized) :
-                    RequestAccessView(viewType: .Contacts)
+                    RequestAccessView(viewType: .Contacts, impactFeedback: impactFeedback)
                 case (.authorized, .notDetermined) :
-                    RequestAccessView(viewType: .Focus)
+                    RequestAccessView(viewType: .Focus, impactFeedback: impactFeedback)
                 default: AccessDeniedView()
             }
         }
@@ -39,7 +45,7 @@ struct ContentView: View {
     func SetFirstLaunchStateFalse(){
         defaults.set(false, forKey: UserDefaults.Keys.FirstAppLaunch.rawValue)
     }
-    private func RequestAccessView(viewType: AccessViewType) -> some View{
+    private func RequestAccessView(viewType: AccessViewType, impactFeedback: UIImpactFeedbackGenerator) -> some View{
         VStack{
             Text("#ProvidingAccess")
                 .font(.headline)
@@ -47,13 +53,13 @@ struct ContentView: View {
             Divider()
             switch(viewType){
                 case .Both:
-                GivePermissionContactsView(authManager: authManager)
+                GivePermissionContactsView(authManager: authManager, impactFeedback: impactFeedback)
                 Divider()
-                GivePermissionFocusView(authManager: authManager)
+                GivePermissionFocusView(authManager: authManager, impactFeedback: impactFeedback)
                 case .Contacts:
-                GivePermissionContactsView(authManager: authManager)
+                GivePermissionContactsView(authManager: authManager, impactFeedback: impactFeedback)
                 case .Focus:
-                GivePermissionFocusView(authManager: authManager)
+                GivePermissionFocusView(authManager: authManager, impactFeedback: impactFeedback)
             }
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
