@@ -18,6 +18,8 @@
 		674985432B40F56500280B58 /* GivePermissionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 674985422B40F56500280B58 /* GivePermissionView.swift */; };
 		674985452B410F8D00280B58 /* AccessDeniedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 674985442B410F8D00280B58 /* AccessDeniedView.swift */; };
 		67609EE92B43632C004FA09E /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 67609EE82B43632C004FA09E /* Localizable.xcstrings */; };
+		678C5DA62B44D6F400E1F650 /* ContactCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678C5DA52B44D6F400E1F650 /* ContactCardView.swift */; };
+		678C5DA82B44E9FE00E1F650 /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678C5DA72B44E9FE00E1F650 /* ViewExtension.swift */; };
 		67F04C142B4184B30008F212 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F04C132B4184B30008F212 /* AppDelegate.swift */; };
 		67F04C162B41887F0008F212 /* WhatsNewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F04C152B41887F0008F212 /* WhatsNewView.swift */; };
 		67F04C8C2B4337940008F212 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F04C8B2B4337940008F212 /* SettingsView.swift */; };
@@ -58,6 +60,8 @@
 		674985422B40F56500280B58 /* GivePermissionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GivePermissionView.swift; sourceTree = "<group>"; };
 		674985442B410F8D00280B58 /* AccessDeniedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessDeniedView.swift; sourceTree = "<group>"; };
 		67609EE82B43632C004FA09E /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		678C5DA52B44D6F400E1F650 /* ContactCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactCardView.swift; sourceTree = "<group>"; };
+		678C5DA72B44E9FE00E1F650 /* ViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
 		67F04C132B4184B30008F212 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		67F04C152B41887F0008F212 /* WhatsNewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatsNewView.swift; sourceTree = "<group>"; };
 		67F04C8B2B4337940008F212 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
@@ -112,6 +116,8 @@
 		67425E4B2B3DDE0100AE9F9C /* MyFriendsFocus */ = {
 			isa = PBXGroup;
 			children = (
+				678C5DA72B44E9FE00E1F650 /* ViewExtension.swift */,
+				678C5DA52B44D6F400E1F650 /* ContactCardView.swift */,
 				67F04C912B4355190008F212 /* UserDefaultsExtension.swift */,
 				67F04C8B2B4337940008F212 /* SettingsView.swift */,
 				67F04C152B41887F0008F212 /* WhatsNewView.swift */,
@@ -272,11 +278,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				678C5DA62B44D6F400E1F650 /* ContactCardView.swift in Sources */,
 				6749853F2B40DE6700280B58 /* ImageView.swift in Sources */,
 				67F04C902B4344130008F212 /* MainView.swift in Sources */,
 				67F04C162B41887F0008F212 /* WhatsNewView.swift in Sources */,
 				67425E4F2B3DDE0100AE9F9C /* ContentView.swift in Sources */,
 				67241F582B3F4816005830C6 /* ContactInfoViewModel.swift in Sources */,
+				678C5DA82B44E9FE00E1F650 /* ViewExtension.swift in Sources */,
 				67F04C142B4184B30008F212 /* AppDelegate.swift in Sources */,
 				674985412B40F4BF00280B58 /* ContactsView.swift in Sources */,
 				67425E772B3DE57300AE9F9C /* ContactManager.swift in Sources */,

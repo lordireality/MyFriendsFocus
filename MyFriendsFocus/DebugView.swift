@@ -20,3 +20,6 @@ struct DebugView: View {
        
     }
 }
+#Preview {
+    DebugView()
+}
