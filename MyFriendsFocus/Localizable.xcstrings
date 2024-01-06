@@ -137,6 +137,22 @@
         }
       }
     },
+    "#FocusBottom" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Without focus"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Сначала без фокуса"
+          }
+        }
+      }
+    },
     "#FocusGrant" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -154,6 +170,22 @@
         }
       }
     },
+    "#FocusTop" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Focus first"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Сначала в фокусе"
+          }
+        }
+      }
+    },
     "#GotoSettings" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -167,6 +199,54 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Перейти в настройки"
+          }
+        }
+      }
+    },
+    "#MyContacts" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "My Contacts"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Мои контакты"
+          }
+        }
+      }
+    },
+    "#NameAZ" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Name A-Z"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Имя А-Я"
+          }
+        }
+      }
+    },
+    "#NameZA" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Name Z-A"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Имя Я-А"
           }
         }
       }
@@ -251,6 +331,22 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Настройки"
+          }
+        }
+      }
+    },
+    "#SortBy" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sort by"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Отсортировать по"
           }
         }
       }
@@ -345,9 +441,6 @@
     },
     "Key" : {
       "extractionState" : "manual"
-    },
-    "My Contacts" : {
-
     }
   },
   "version" : "1.0"

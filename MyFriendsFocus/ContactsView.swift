@@ -13,7 +13,7 @@ struct ContactsView: View {
     
     @StateObject var contactManager:ContactManager
     @StateObject var focusManager:FocusManager
-    
+    @State private var tableSortOrder = [KeyPathComparator(\ContactInfo.fullName)]
     var body: some View {
         NavigationStack{
             VStack {
@@ -35,9 +35,16 @@ struct ContactsView: View {
                 }
                 .frame(maxWidth: .infinity, alignment: .leading)
                 Divider()
-
-                Table(contactManager.contactData){
-                    TableColumn("My Contacts"){ contact in
+                Picker("#SortBy", selection: $tableSortOrder) {
+                    Text("#NameAZ").tag([KeyPathComparator(\ContactInfo.fullName)])
+                    Text("#NameZA").tag([KeyPathComparator(\ContactInfo.fullName, order: .reverse)])
+                    Text("#FocusTop").tag([KeyPathComparator(\ContactInfo.isFocus.comparable)])
+                    Text("#FocusBottom").tag([KeyPathComparator(\ContactInfo.isFocus.comparable, order: .reverse)])
+                }.pickerStyle(SegmentedPickerStyle())
+                //.frame(maxWidth: .infinity, alignment: .leading)
+                
+                Table(contactManager.contactData, sortOrder: $tableSortOrder){
+                    TableColumn("#MyContacts"){ contact in
                         HStack{
                             NavigationLink(destination: ContactCardView(contact: contact)) {
                                 ContactImage(contact: contact, width: nil, height: nil)
@@ -64,10 +71,12 @@ struct ContactsView: View {
                         }
                     }
                     
-                }.refreshable {
-                    impactFeedback.impactOccurred()
-                    contactManager.fetchContacts()
+                }.onChange(of: tableSortOrder){ _ , newOrder in
+                    contactManager.contactData.sort(using: newOrder)
                 }
+            }.refreshable {
+                impactFeedback.impactOccurred()
+                contactManager.fetchContacts()
             }
         }
         .navigationTitle("#Contacts")

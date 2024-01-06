@@ -20,6 +20,7 @@
 		67609EE92B43632C004FA09E /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 67609EE82B43632C004FA09E /* Localizable.xcstrings */; };
 		678C5DA62B44D6F400E1F650 /* ContactCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678C5DA52B44D6F400E1F650 /* ContactCardView.swift */; };
 		678C5DA82B44E9FE00E1F650 /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678C5DA72B44E9FE00E1F650 /* ViewExtension.swift */; };
+		67B314D92B4A171F00F7C08E /* BoolExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B314D82B4A171F00F7C08E /* BoolExtension.swift */; };
 		67F04C142B4184B30008F212 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F04C132B4184B30008F212 /* AppDelegate.swift */; };
 		67F04C162B41887F0008F212 /* WhatsNewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F04C152B41887F0008F212 /* WhatsNewView.swift */; };
 		67F04C8C2B4337940008F212 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F04C8B2B4337940008F212 /* SettingsView.swift */; };
@@ -62,6 +63,8 @@
 		67609EE82B43632C004FA09E /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		678C5DA52B44D6F400E1F650 /* ContactCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactCardView.swift; sourceTree = "<group>"; };
 		678C5DA72B44E9FE00E1F650 /* ViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
+		67B314D72B4A0F1E00F7C08E /* MyFriendsFocusRelease.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MyFriendsFocusRelease.entitlements; sourceTree = "<group>"; };
+		67B314D82B4A171F00F7C08E /* BoolExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoolExtension.swift; sourceTree = "<group>"; };
 		67F04C132B4184B30008F212 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		67F04C152B41887F0008F212 /* WhatsNewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatsNewView.swift; sourceTree = "<group>"; };
 		67F04C8B2B4337940008F212 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
@@ -116,6 +119,8 @@
 		67425E4B2B3DDE0100AE9F9C /* MyFriendsFocus */ = {
 			isa = PBXGroup;
 			children = (
+				67B314D82B4A171F00F7C08E /* BoolExtension.swift */,
+				67B314D72B4A0F1E00F7C08E /* MyFriendsFocusRelease.entitlements */,
 				678C5DA72B44E9FE00E1F650 /* ViewExtension.swift */,
 				678C5DA52B44D6F400E1F650 /* ContactCardView.swift */,
 				67F04C912B4355190008F212 /* UserDefaultsExtension.swift */,
@@ -286,6 +291,7 @@
 				67241F582B3F4816005830C6 /* ContactInfoViewModel.swift in Sources */,
 				678C5DA82B44E9FE00E1F650 /* ViewExtension.swift in Sources */,
 				67F04C142B4184B30008F212 /* AppDelegate.swift in Sources */,
+				67B314D92B4A171F00F7C08E /* BoolExtension.swift in Sources */,
 				674985412B40F4BF00280B58 /* ContactsView.swift in Sources */,
 				67425E772B3DE57300AE9F9C /* ContactManager.swift in Sources */,
 				67425E4D2B3DDE0100AE9F9C /* MyFriendsFocusApp.swift in Sources */,
@@ -483,6 +489,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = MyFriendsFocus/MyFriendsFocusRelease.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MyFriendsFocus/Preview Content\"";
@@ -502,6 +510,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = gzykin.MyFriendsFocus;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

@@ -78,6 +78,8 @@ struct ContactCardView: View {
                 break
             case .faceDown:
                 break
+            default:
+                break
             }
         }
     }
