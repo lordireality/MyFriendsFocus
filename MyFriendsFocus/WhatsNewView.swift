@@ -10,7 +10,6 @@ import SwiftUI
 
 struct WhatsNewView: View {
     @Environment(\.dismiss) var dismiss
-    let impactFeedback: UIImpactFeedbackGenerator
 
     var body: some View {
         VStack {

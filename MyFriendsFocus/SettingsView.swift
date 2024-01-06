@@ -13,7 +13,6 @@ struct SettingsView: View {
     
     @State var showingContactSelect:Bool = false
     @State var showingUDAlert:Bool = false
-    let impactFeedback: UIImpactFeedbackGenerator
     var body : some View {
         
         VStack{

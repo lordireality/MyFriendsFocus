@@ -13,7 +13,6 @@ struct ContactsView: View {
     
     @StateObject var contactManager:ContactManager
     @StateObject var focusManager:FocusManager
-    let impactFeedback: UIImpactFeedbackGenerator
     
     var body: some View {
         NavigationStack{

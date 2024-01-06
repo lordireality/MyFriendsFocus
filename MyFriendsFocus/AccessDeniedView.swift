@@ -19,6 +19,7 @@ struct AccessDeniedView: View {
             Text("#ContactsFocusDeniedComment")
                 .multilineTextAlignment(.center)
             Button("#GotoSettings"){
+                impactFeedback.impactOccurred()
                 if let url = URL(string: UIApplication.openSettingsURLString) {
                     UIApplication.shared.open(url)
                 }

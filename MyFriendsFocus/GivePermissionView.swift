@@ -11,7 +11,6 @@ import SwiftUI
 struct GivePermissionContactsView: View {
     
     let authManager: AuthManager
-    let impactFeedback: UIImpactFeedbackGenerator
     
     var body: some View {
         VStack {
@@ -29,7 +28,6 @@ struct GivePermissionContactsView: View {
 struct GivePermissionFocusView: View {
     
     let authManager: AuthManager
-    let impactFeedback: UIImpactFeedbackGenerator
     
     var body: some View {
         VStack {
