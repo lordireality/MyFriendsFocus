@@ -43,7 +43,9 @@ struct ContactsView: View {
                 }.pickerStyle(SegmentedPickerStyle())
                 //.frame(maxWidth: .infinity, alignment: .leading)
                 
-                Table(contactManager.contactData, sortOrder: $tableSortOrder){
+                var datasource = UserDefaults.standard.bool(forKey: UserDefaults.Keys.showOnlyFocused.rawValue) == true ? contactManager.contactData.filter{ $0.isFocus == true } : contactManager.contactData
+                
+                Table(datasource, sortOrder: $tableSortOrder){
                     TableColumn("#MyContacts"){ contact in
                         HStack{
                             NavigationLink(destination: ContactCardView(contact: contact)) {

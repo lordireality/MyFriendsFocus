@@ -335,6 +335,9 @@
         }
       }
     },
+    "#ShowFocusedOnly" : {
+
+    },
     "#SortBy" : {
       "localizations" : {
         "en" : {

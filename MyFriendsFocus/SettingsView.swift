@@ -13,6 +13,7 @@ struct SettingsView: View {
     
     @State var showingContactSelect:Bool = false
     @State var showingUDAlert:Bool = false
+    @State private var showOnlyFocused = UserDefaults.standard.bool(forKey: UserDefaults.Keys.showOnlyFocused.rawValue)
     var body : some View {
         
         VStack{
@@ -26,15 +27,25 @@ struct SettingsView: View {
             .alert("#UDCleared", isPresented: $showingUDAlert) {
                 Button("#OK", role: .cancel) { }
             }
-            
-            Button("#SelectMyCard"){
+            Divider()
+            HStack{
+                Button("#SelectMyCard"){
+                    showingContactSelect = true
+                }
+                .buttonStyle(.bordered)
+                .sheet(isPresented: $showingContactSelect) {
+                    ContactPickerView()
+                }
                 
-                showingContactSelect = true
+                //TODO: Add remove my card
             }
-            .buttonStyle(.bordered)
-            .sheet(isPresented: $showingContactSelect) {
-                ContactPickerView()
+            Divider()
+            Toggle("#ShowFocusedOnly", isOn: $showOnlyFocused)
+            .onChange(of: showOnlyFocused){
+                impactFeedback.impactOccurred()
+                UserDefaults.standard.set(showOnlyFocused, forKey: UserDefaults.Keys.showOnlyFocused.rawValue)
             }
+            
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
     }
