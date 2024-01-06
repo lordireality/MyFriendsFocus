@@ -343,6 +343,9 @@
     "1. Пока ничего, но мы стараемся" : {
 
     },
+    "Key" : {
+      "extractionState" : "manual"
+    },
     "My Contacts" : {
 
     }

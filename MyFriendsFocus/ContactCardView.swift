@@ -7,18 +7,20 @@
 
 import Foundation
 import SwiftUI
-//import UIKit
+import UIKit
 
 
 struct ContactCardView: View {
     let contact:ContactInfo
-    //@State private var orientation = UIDeviceOrientation.unknown
+    @State private var orientation:UIDeviceOrientation = UIDeviceOrientation.unknown
 
     
     var body : some View {
         ScrollView{
             VStack{
-                /*if !orientation.isLandscape || !orientation.isPortrait{
+                
+                if orientation == .landscapeLeft || orientation == .landscapeRight
+                    {
                     HStack{
                         ContactImage(contact: contact, width: 100, height: 100)
                         Divider()
@@ -36,8 +38,9 @@ struct ContactCardView: View {
                                 }
                             }
                         }
-                    }.frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
-                } else {*/
+                    }
+                    .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
+                } else {
                     VStack{
                         ContactImage(contact: contact, width: 200, height: 200)
                         Divider()
@@ -53,17 +56,29 @@ struct ContactCardView: View {
                                     .foregroundStyle(.purple)
                             }
                         }
-                    //}
+                    }
                 }
                 Divider()
 
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
-        }/*.onRotate { newOrientation in
-            orientation = newOrientation
-        }*/
+        }.onRotate { newOrientation in
+            switch newOrientation {
+            case .unknown:
+                break
+            case .portrait:
+                orientation = newOrientation
+            case .portraitUpsideDown:
+                break
+            case .landscapeLeft:
+                orientation = newOrientation
+            case .landscapeRight:
+                orientation = newOrientation
+            case .faceUp:
+                break
+            case .faceDown:
+                break
+            }
+        }
     }
-}
-#Preview {
-    ContactCardView(contact: ContactInfo(fullName: "Вы", isFocus: false, profilePicData: nil))
 }

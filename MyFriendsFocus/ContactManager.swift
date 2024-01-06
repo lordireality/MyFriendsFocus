@@ -46,24 +46,29 @@ class ContactManager: ObservableObject{
             self.thisDeviceContact = ContactInfo(fullName: "Вы", isFocus: false, profilePicData: nil);
             let keys = [CNContactGivenNameKey, CNContactFamilyNameKey, CNContactMiddleNameKey, CNContactThumbnailImageDataKey, CNContactIdentifierKey]
             let request = CNContactFetchRequest(keysToFetch: keys as [CNKeyDescriptor])
-            do {
-                //TODO:
-                //This method should not be called on the main thread as it may lead to UI unresponsiveness.
-                //WTF???
-                try self.store.enumerateContacts(with: request) { contact, stop in
-                    if(contact.identifier != UserDefaults.standard.string(forKey: UserDefaults.Keys.thisDeviceContactIdentifier.rawValue)){
-                        self.contactData.append(ContactInfo(identifier: contact.identifier, fullName: "\(contact.familyName) \(contact.givenName) \(contact.middleName)", profilePicData:  contact.thumbnailImageData))
-                    } else {
-                        self.thisDeviceContact = ContactInfo(identifier: contact.identifier, fullName: "\(contact.familyName) \(contact.givenName) \(contact.middleName)", profilePicData:  contact.thumbnailImageData)
+            DispatchQueue.global().async {
+                do {
+                    //TODO:
+                    //This method should not be called on the main thread as it may lead to UI unresponsiveness.
+                    //WTF???
+                    try self.store.enumerateContacts(with: request) { contact, stop in
+                        
+                        DispatchQueue.main.async {
+                            if(contact.identifier != UserDefaults.standard.string(forKey: UserDefaults.Keys.thisDeviceContactIdentifier.rawValue)){
+                                self.contactData.append(ContactInfo(identifier: contact.identifier, fullName: "\(contact.familyName) \(contact.givenName) \(contact.middleName)", profilePicData:  contact.thumbnailImageData))
+                            } else {
+                                self.thisDeviceContact = ContactInfo(identifier: contact.identifier, fullName: "\(contact.familyName) \(contact.givenName) \(contact.middleName)", profilePicData:  contact.thumbnailImageData)
+                            }
+                        }
+                        
+                        
+                        self.resp = true
                     }
+                } catch {
+                    self.resp = false
+                    self.ex = "\(error)"
                     
-                    
-                    self.resp = true
                 }
-            } catch {
-                self.resp = false
-                self.ex = "\(error)"
-                
             }
         }
     }

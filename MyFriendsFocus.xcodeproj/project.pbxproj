@@ -133,8 +133,8 @@
 				674985442B410F8D00280B58 /* AccessDeniedView.swift */,
 				67F04C132B4184B30008F212 /* AppDelegate.swift */,
 				67F04C8D2B4337A70008F212 /* DebugView.swift */,
-				67F04C8F2B4344130008F212 /* MainView.swift */,
 				67609EE82B43632C004FA09E /* Localizable.xcstrings */,
+				67F04C8F2B4344130008F212 /* MainView.swift */,
 			);
 			path = MyFriendsFocus;
 			sourceTree = "<group>";
