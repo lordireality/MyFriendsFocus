@@ -1,6 +1,9 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "#AddContactToSelected" : {
+
+    },
     "#ClearUD" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -336,6 +339,9 @@
       }
     },
     "#ShowFocusedOnly" : {
+
+    },
+    "#ShowSelectedContacts" : {
 
     },
     "#SortBy" : {

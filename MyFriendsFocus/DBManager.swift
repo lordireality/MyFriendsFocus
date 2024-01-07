@@ -44,11 +44,15 @@ class DBManager{
     
     func createContactRelation(contactIdentifier: String) async -> DBSelectedContacts?{
         await withCheckedContinuation({ continuation in
-            let contactRelation = DBSelectedContacts()
-            contactRelation.id = .init()
-            contactRelation.contactIndentifier = contactIdentifier
-            self.saveContext()
-            continuation.resume(returning: contactRelation)
+            self.backgroundContext.performAndWait{
+                let contactRelation = DBSelectedContacts(context: self.backgroundContext)
+                //TODO: ??? WTF App freezes and crashes
+                contactRelation.id = .init()
+                contactRelation.contactIndentifier = contactIdentifier
+                self.saveContext()
+                continuation.resume(returning: contactRelation)
+            }
+
         })
     }
     func removeContactRelation (contactRelation: DBSelectedContacts) async -> Bool?{
