@@ -48,9 +48,6 @@ class ContactManager: ObservableObject{
             let request = CNContactFetchRequest(keysToFetch: keys as [CNKeyDescriptor])
             DispatchQueue.global().async {
                 do {
-                    //TODO:
-                    //This method should not be called on the main thread as it may lead to UI unresponsiveness.
-                    //WTF???
                     try self.store.enumerateContacts(with: request) { contact, stop in
                         
                         DispatchQueue.main.async {

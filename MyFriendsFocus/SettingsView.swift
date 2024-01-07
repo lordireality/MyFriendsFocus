@@ -61,6 +61,7 @@ struct SettingsView: View {
                 }
                 if showSelectedContacts == true {
                     NavigationStack {
+                        
                         List {
                             ForEach(selectedContacts) { selectedContacts in
                                 Text(selectedContacts.contactIndentifier!)
@@ -71,7 +72,7 @@ struct SettingsView: View {
                                 }
                             }
                         }.refreshable {
-                            task {
+                            Task {
                                 var res = await DBManager.shared.getRelations()
                                 if !res.isEmpty{
                                     selectedContacts.removeAll()
@@ -111,13 +112,28 @@ struct SettingsView: View {
         lastSelContact = nil
     }
     func addToList(){
-        if let lastSelContact{
-            Task {
+        Task (priority: .high) {
+            if let lastSelContact{
+                //TROUBLE: запускается авейт и все, не привета не ответа.
+                //пробовал:
+                //проверить что вся вью не перерисовывается и таск улетает
+                //запихнуть id таска в стейт
+                //обернул вообще нахуй вс] в таск
+                //крашить аппу
+                print("привет это кто")
                 var res = await dbm.createContactRelation(contactIdentifier: lastSelContact.identifier)
-            }
+                fatalError("ооообля нихера себе")
                 
-        }
+                if let res{
+                    selectedContacts.append(res)
+                } else {
+                    fatalError("бля братан не могу, мы в бахмуте ебашимся")
+                }
+                
+            }
         lastSelContact = nil
+        }
+        
     }
 }
 

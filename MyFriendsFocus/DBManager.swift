@@ -10,7 +10,7 @@ import CoreData
 import os
 
 
-class DBManager{
+class DBManager: ObservableObject{
     public var container: NSPersistentContainer
     
     lazy var backgroundContext: NSManagedObjectContext = {
@@ -46,13 +46,11 @@ class DBManager{
         await withCheckedContinuation({ continuation in
             self.backgroundContext.performAndWait{
                 let contactRelation = DBSelectedContacts(context: self.backgroundContext)
-                //TODO: ??? WTF App freezes and crashes
                 contactRelation.id = .init()
                 contactRelation.contactIndentifier = contactIdentifier
                 self.saveContext()
                 continuation.resume(returning: contactRelation)
             }
-
         })
     }
     func removeContactRelation (contactRelation: DBSelectedContacts) async -> Bool?{
