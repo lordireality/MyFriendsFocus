@@ -29,6 +29,7 @@ struct SettingsView: View {
             Button("#ClearUD"){
                 impactFeedback.impactOccurred()
                 UserDefaults.standard.reset()
+                contactManager.fetchContacts()
                 showingUDAlert = true
             }
             .buttonStyle(.bordered)
@@ -48,6 +49,7 @@ struct SettingsView: View {
                 Button("#RemoveMyCard"){
                     impactFeedback.impactOccurred()
                     UserDefaults.standard.removeObject(forKey: UserDefaults.Keys.thisDeviceContactIdentifier.rawValue)
+                    contactManager.fetchContacts()
                     showingRemoveMyCardAlert = true
                 }
                 .buttonStyle(.bordered)
@@ -125,7 +127,7 @@ struct SettingsView: View {
             
         }
         lastSelContact = nil
-        //contactManager.fetchContacts()
+        contactManager.fetchContacts()
     }
     func addRelatedToList(){
         Task{
