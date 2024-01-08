@@ -41,6 +41,9 @@ class ContactManager: ObservableObject{
     var store: CNContactStore = CNContactStore()
     
     func compareContacts(identifier: String) -> ContactInfo?{
+        if thisDeviceContact.identifier == identifier{
+            return thisDeviceContact
+        }
         return contactData.filter{ $0.identifier == identifier }.first
     }
     
