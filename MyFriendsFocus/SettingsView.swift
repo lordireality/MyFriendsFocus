@@ -10,20 +10,22 @@ import SwiftUI
 import ContactsUI
 
 struct SettingsView: View {
-    
-    @State var showingContactSelect:Bool = false
-    @State var showingSelContactSelect:Bool = false
-    @State var showingUDAlert:Bool = false
+    //TODO: Refactor this
+    var contactManager:ContactManager
+    @State private var showingContactSelect:Bool = false
+    @State private var showingSelContactSelect:Bool = false
+    @State private var showingUDAlert:Bool = false
+    @State private var showingRemoveMyCardAlert:Bool = false
     @State private var showOnlyFocused = UserDefaults.standard.bool(forKey: UserDefaults.Keys.showOnlyFocused.rawValue)
     @State private var showSelectedContacts = UserDefaults.standard.bool(forKey: UserDefaults.Keys.showSelected.rawValue)
     @State private var selectedContacts:[DBSelectedContacts] = []
     @State private var lastSelContact: CNContact?
-    private var dbm = DBManager.shared
-
+    private let dbm = DBManager.shared
+    public init(contactManager:ContactManager){
+        self.contactManager = contactManager
+    }
     var body : some View {
-        
         VStack{
-            //TODO: Addloader and handler
             Button("#ClearUD"){
                 impactFeedback.impactOccurred()
                 UserDefaults.standard.reset()
@@ -43,7 +45,15 @@ struct SettingsView: View {
                     ContactPickerView(selectedContact: $lastSelContact)
                             
                 }
-                
+                Button("#RemoveMyCard"){
+                    impactFeedback.impactOccurred()
+                    UserDefaults.standard.removeObject(forKey: UserDefaults.Keys.thisDeviceContactIdentifier.rawValue)
+                    showingRemoveMyCardAlert = true
+                }
+                .buttonStyle(.bordered)
+                .alert("#MyCardCleared", isPresented: $showingRemoveMyCardAlert) {
+                    Button("#OK", role: .cancel) { }
+                }
                 //TODO: Add remove my card
             }
             Divider()
@@ -59,41 +69,35 @@ struct SettingsView: View {
                     impactFeedback.impactOccurred()
                     UserDefaults.standard.set(showSelectedContacts, forKey: UserDefaults.Keys.showSelected.rawValue)
                 }
-                if showSelectedContacts == true {
-                    NavigationStack {
-                        
-                        List {
-                            ForEach(selectedContacts) { selectedContacts in
-                                Text(selectedContacts.contactIndentifier!)
-                            }
-                            .onDelete{ index in
-                                Task {
-                                    await deleteRelated(at: index)
-                                }
-                            }
-                        }.refreshable {
-                            Task {
-                                let res = await DBManager.shared.getRelations()
-                                if !res.isEmpty{
-                                    selectedContacts.removeAll()
-                                    selectedContacts += res
-                                }
-                            }
-                        }
-                        
-                    }
-                    Button("#AddContactToSelected"){
-                        impactFeedback.impactOccurred()
-                        showingSelContactSelect = true
-                    }
-                    .buttonStyle(.bordered)
-                    .sheet(isPresented: $showingSelContactSelect, onDismiss: addToList) {
-                        ContactPickerView(selectedContact: $lastSelContact)
-                    }
+                Button("#AddContactToSelected"){
+                    impactFeedback.impactOccurred()
+                    showingSelContactSelect = true
+                }
+                .buttonStyle(.bordered)
+                .sheet(isPresented: $showingSelContactSelect, onDismiss: addRelatedToList) {
+                    ContactPickerView(selectedContact: $lastSelContact)
                 }
                 
+                if showSelectedContacts == true {
+                    List {
+                        ForEach(selectedContacts) { selectedContacts in
+                            if let identifier = selectedContacts.contactIndentifier {
+                                var contactInfo = contactManager.compareContacts(identifier: identifier)
+                                Text(contactInfo?.fullName ?? "#DeletedContact")
+                            } else {
+                                Text("#DeletedContact")
+                            }
+                        }
+                        .onDelete{ index in
+                            Task {
+                                await deleteRelated(at: index)
+                            }
+                        }
+                    }.refreshable {
+                        getRelated()
+                    }
+                }
             }
-            
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
     }
@@ -106,15 +110,25 @@ struct SettingsView: View {
             
         }
     }
+    func getRelated(){
+        Task {
+            let res = await DBManager.shared.getRelations()
+            if !res.isEmpty{
+                selectedContacts.removeAll()
+                selectedContacts += res
+            }
+        }
+    }
     func setMyCard(){
         if let lastSelContact{
             UserDefaults.standard.set(lastSelContact.identifier, forKey: UserDefaults.Keys.thisDeviceContactIdentifier.rawValue)
             
         }
         lastSelContact = nil
+        //contactManager.fetchContacts()
     }
-    func addToList(){
-        Task (priority: .high) {
+    func addRelatedToList(){
+        Task{
             if let lastSelContact{
                 var res = await dbm.createContactRelation(contactIdentifier: lastSelContact.identifier)
                 if let res{

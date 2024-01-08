@@ -39,6 +39,12 @@ class ContactManager: ObservableObject{
     var ex:String? = nil
     //Store
     var store: CNContactStore = CNContactStore()
+    
+    func compareContacts(identifier: String) -> ContactInfo?{
+        return contactData.filter{ $0.identifier == identifier }.first
+    }
+    
+    
     ///Fetches contacts from devies.
     func fetchContacts(){
         DispatchQueue.main.async {

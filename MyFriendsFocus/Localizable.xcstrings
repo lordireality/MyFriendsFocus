@@ -123,6 +123,9 @@
         }
       }
     },
+    "#DeletedContact" : {
+
+    },
     "#FocusAccess" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -205,6 +208,9 @@
           }
         }
       }
+    },
+    "#MyCardCleared" : {
+
     },
     "#MyContacts" : {
       "localizations" : {
@@ -304,6 +310,9 @@
           }
         }
       }
+    },
+    "#RemoveMyCard" : {
+
     },
     "#SelectMyCard" : {
       "localizations" : {
