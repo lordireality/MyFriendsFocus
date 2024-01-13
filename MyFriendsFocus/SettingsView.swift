@@ -114,8 +114,8 @@ struct SettingsView: View {
         for index in offsets {
             let relContact = selectedContacts[index]
             if await dbm.removeContactRelation(contactRelation: relContact) == true{
-                contactManager.fetchContacts()
                 getRelated()
+                contactManager.fetchContacts()
             }
             
         }
@@ -142,12 +142,14 @@ struct SettingsView: View {
             if let lastSelContact{
                 let res = await dbm.createContactRelation(contactIdentifier: lastSelContact.identifier)
                 if let res {
-                    contactManager.fetchContacts()
                     getRelated()
+                    contactManager.fetchContacts()
                 }
+                
             }
         lastSelContact = nil
         }
+        
         
     }
 }

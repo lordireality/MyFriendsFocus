@@ -33,6 +33,9 @@ class ContactManager: ObservableObject{
     @Published var contactData:[ContactInfo] = []
     ///this device contact
     @Published var thisDeviceContact:ContactInfo = ContactInfo(fullName: "Вы", isFocus: false, profilePicData: nil)
+    
+    @Published var selectedContacts:[DBSelectedContacts] = []
+    
     ///Is fetching contacts was succesfull
     var resp = false
     ///if exception on fectch contacts was thrown, text will be placed here
@@ -46,7 +49,7 @@ class ContactManager: ObservableObject{
         }
         return contactData.filter{ $0.identifier == identifier }.first
     }
-    
+      
     
     ///Fetches contacts from devies.
     func fetchContacts(){
