@@ -43,11 +43,20 @@ class ContactManager: ObservableObject{
     //Store
     var store: CNContactStore = CNContactStore()
     
-    func compareContacts(identifier: String) -> ContactInfo?{
+    func compareContactsLocal(identifier: String) -> ContactInfo?{
         if thisDeviceContact.identifier == identifier{
             return thisDeviceContact
         }
         return contactData.filter{ $0.identifier == identifier }.first
+    }
+    func getFullNameFromId(identifier: String) -> String?{
+        let keys = [CNContactGivenNameKey, CNContactFamilyNameKey, CNContactMiddleNameKey, CNContactIdentifierKey]
+        do{
+            let contact = try self.store.unifiedContact(withIdentifier: identifier, keysToFetch: keys as [CNKeyDescriptor])
+            return "\(contact.familyName) \(contact.givenName) \(contact.middleName)"
+        } catch {
+            return nil
+        }
     }
       
     

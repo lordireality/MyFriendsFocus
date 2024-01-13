@@ -88,8 +88,7 @@ struct SettingsView: View {
                     List {
                         ForEach(selectedContacts) { selectedContacts in
                             if let identifier = selectedContacts.contactIndentifier {
-                                let contactInfo = contactManager.compareContacts(identifier: identifier)
-                                Text(contactInfo?.fullName ?? "#DeletedContact")
+                                Text(contactManager.getFullNameFromId(identifier: identifier) ?? "#DeletedContact")
                             } else {
                                 Text("#DeletedContact")
                             }
