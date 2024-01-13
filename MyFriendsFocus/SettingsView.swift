@@ -56,10 +56,10 @@ struct SettingsView: View {
                 .alert("#MyCardCleared", isPresented: $showingRemoveMyCardAlert) {
                     Button("#OK", role: .cancel) { }
                 }
-                //TODO: Add remove my card
             }
             Divider()
             Toggle("#ShowFocusedOnly", isOn: $showOnlyFocused)
+            .padding(.trailing, 5)
             .onChange(of: showOnlyFocused){
                 impactFeedback.impactOccurred()
                 UserDefaults.standard.set(showOnlyFocused, forKey: UserDefaults.Keys.showOnlyFocused.rawValue)
@@ -67,24 +67,26 @@ struct SettingsView: View {
             Divider()
             VStack{
                 Toggle("#ShowSelectedContacts", isOn: $showSelectedContacts)
+                    .padding(.trailing, 5)
                 .onChange(of: showSelectedContacts){
                     impactFeedback.impactOccurred()
                     UserDefaults.standard.set(showSelectedContacts, forKey: UserDefaults.Keys.showSelected.rawValue)
                 }
-                Button("#AddContactToSelected"){
-                    impactFeedback.impactOccurred()
-                    showingSelContactSelect = true
-                }
-                .buttonStyle(.bordered)
-                .sheet(isPresented: $showingSelContactSelect, onDismiss: addRelatedToList) {
-                    ContactPickerView(selectedContact: $lastSelContact)
-                }
-                
+
                 if showSelectedContacts == true {
+                    Button("#AddContactToSelected"){
+                        impactFeedback.impactOccurred()
+                        showingSelContactSelect = true
+                    }
+                    .buttonStyle(.bordered)
+                    .sheet(isPresented: $showingSelContactSelect, onDismiss: addRelatedToList) {
+                        ContactPickerView(selectedContact: $lastSelContact)
+                    }
+                    
                     List {
                         ForEach(selectedContacts) { selectedContacts in
                             if let identifier = selectedContacts.contactIndentifier {
-                                var contactInfo = contactManager.compareContacts(identifier: identifier)
+                                let contactInfo = contactManager.compareContacts(identifier: identifier)
                                 Text(contactInfo?.fullName ?? "#DeletedContact")
                             } else {
                                 Text("#DeletedContact")
