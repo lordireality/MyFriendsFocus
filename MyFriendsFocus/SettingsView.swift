@@ -71,6 +71,7 @@ struct SettingsView: View {
                 .onChange(of: showSelectedContacts){
                     impactFeedback.impactOccurred()
                     UserDefaults.standard.set(showSelectedContacts, forKey: UserDefaults.Keys.showSelected.rawValue)
+                    contactManager.fetchContacts()
                 }
 
                 if showSelectedContacts == true {
@@ -112,8 +113,9 @@ struct SettingsView: View {
     func deleteRelated(at offsets: IndexSet) async {
         for index in offsets {
             let relContact = selectedContacts[index]
-            if let res = await dbm.removeContactRelation(contactRelation: relContact){
-                selectedContacts.remove(at: index)
+            if await dbm.removeContactRelation(contactRelation: relContact) == true{
+                contactManager.fetchContacts()
+                getRelated()
             }
             
         }
@@ -138,9 +140,10 @@ struct SettingsView: View {
     func addRelatedToList(){
         Task{
             if let lastSelContact{
-                var res = await dbm.createContactRelation(contactIdentifier: lastSelContact.identifier)
-                if let res{
-                    selectedContacts.append(res)
+                let res = await dbm.createContactRelation(contactIdentifier: lastSelContact.identifier)
+                if let res {
+                    contactManager.fetchContacts()
+                    getRelated()
                 }
             }
         lastSelContact = nil

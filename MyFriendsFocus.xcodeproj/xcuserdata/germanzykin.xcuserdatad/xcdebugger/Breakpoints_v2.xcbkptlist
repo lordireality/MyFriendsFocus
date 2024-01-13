@@ -3,4 +3,778 @@
    uuid = "B331E6C3-69B1-45F7-A22C-7B3B06559119"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5F766210-7DCD-45AB-9C84-A8B69496BE41"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MyFriendsFocus/ContactManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "61"
+            endingLineNumber = "61"
+            landmarkName = "fetchContacts()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "5F766210-7DCD-45AB-9C84-A8B69496BE41 - 27187d3328a7ca25"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in MyFriendsFocus.ContactManager.fetchContacts() -&gt; ()"
+                  moduleName = "MyFriendsFocus"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/germanzykin/Documents/xcodeCum/MyFriendsFocus/MyFriendsFocus/ContactManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "58"
+                  endingLineNumber = "58"
+                  offsetFromSymbolStart = "1184">
+               </Location>
+               <Location
+                  uuid = "5F766210-7DCD-45AB-9C84-A8B69496BE41 - 27187d3328a7ca06"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in MyFriendsFocus.ContactManager.fetchContacts() -&gt; ()"
+                  moduleName = "MyFriendsFocus"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/germanzykin/Documents/xcodeCum/MyFriendsFocus/MyFriendsFocus/ContactManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "59"
+                  endingLineNumber = "59"
+                  offsetFromSymbolStart = "1184">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0F19C26A-E20E-4393-8D75-E298B22CB98A"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MyFriendsFocus/ContactManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
+            landmarkName = "fetchContacts()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "0F19C26A-E20E-4393-8D75-E298B22CB98A - 4e26d6518b72ba33"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for closure #1 @Sendable () async -&gt; () in closure #1 @Swift.MainActor () -&gt; () in MyFriendsFocus.ContactManager.fetchContacts() -&gt; ()"
+                  moduleName = "MyFriendsFocus"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/germanzykin/Documents/xcodeCum/MyFriendsFocus/MyFriendsFocus/ContactManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "60"
+                  endingLineNumber = "60"
+                  offsetFromSymbolStart = "52">
+               </Location>
+               <Location
+                  uuid = "0F19C26A-E20E-4393-8D75-E298B22CB98A - 94e2e9c8e292cf27"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(2) await resume partial function for closure #1 @Sendable () async -&gt; () in closure #1 @Swift.MainActor () -&gt; () in MyFriendsFocus.ContactManager.fetchContacts() -&gt; ()"
+                  moduleName = "MyFriendsFocus"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/germanzykin/Documents/xcodeCum/MyFriendsFocus/MyFriendsFocus/ContactManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "60"
+                  endingLineNumber = "60"
+                  offsetFromSymbolStart = "44">
+               </Location>
+               <Location
+                  uuid = "0F19C26A-E20E-4393-8D75-E298B22CB98A - 826c6fc5865d7e3d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for closure #1 @Sendable () async -&gt; () in closure #1 @Swift.MainActor () -&gt; () in MyFriendsFocus.ContactManager.fetchContacts() -&gt; ()"
+                  moduleName = "MyFriendsFocus"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/germanzykin/Documents/xcodeCum/MyFriendsFocus/MyFriendsFocus/ContactManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "60"
+                  endingLineNumber = "60"
+                  offsetFromSymbolStart = "60">
+               </Location>
+               <Location
+                  uuid = "0F19C26A-E20E-4393-8D75-E298B22CB98A - 826c6fc5865d7e3d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for closure #1 @Sendable () async -&gt; () in closure #1 @Swift.MainActor () -&gt; () in MyFriendsFocus.ContactManager.fetchContacts() -&gt; ()"
+                  moduleName = "MyFriendsFocus"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/germanzykin/Documents/xcodeCum/MyFriendsFocus/MyFriendsFocus/ContactManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "60"
+                  endingLineNumber = "60"
+                  offsetFromSymbolStart = "80">
+               </Location>
+               <Location
+                  uuid = "0F19C26A-E20E-4393-8D75-E298B22CB98A - 4e26d6518b72ba14"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for closure #1 @Sendable () async -&gt; () in closure #1 @Swift.MainActor () -&gt; () in MyFriendsFocus.ContactManager.fetchContacts() -&gt; ()"
+                  moduleName = "MyFriendsFocus"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/germanzykin/Documents/xcodeCum/MyFriendsFocus/MyFriendsFocus/ContactManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "61"
+                  endingLineNumber = "61"
+                  offsetFromSymbolStart = "52">
+               </Location>
+               <Location
+                  uuid = "0F19C26A-E20E-4393-8D75-E298B22CB98A - 94e2e9c8e292cf00"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(2) await resume partial function for closure #1 @Sendable () async -&gt; () in closure #1 @Swift.MainActor () -&gt; () in MyFriendsFocus.ContactManager.fetchContacts() -&gt; ()"
+                  moduleName = "MyFriendsFocus"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/germanzykin/Documents/xcodeCum/MyFriendsFocus/MyFriendsFocus/ContactManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "61"
+                  endingLineNumber = "61"
+                  offsetFromSymbolStart = "44">
+               </Location>
+               <Location
+                  uuid = "0F19C26A-E20E-4393-8D75-E298B22CB98A - 826c6fc5865d7e1a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for closure #1 @Sendable () async -&gt; () in closure #1 @Swift.MainActor () -&gt; () in MyFriendsFocus.ContactManager.fetchContacts() -&gt; ()"
+                  moduleName = "MyFriendsFocus"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/germanzykin/Documents/xcodeCum/MyFriendsFocus/MyFriendsFocus/ContactManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "61"
+                  endingLineNumber = "61"
+                  offsetFromSymbolStart = "80">
+               </Location>
+               <Location
+                  uuid = "0F19C26A-E20E-4393-8D75-E298B22CB98A - 4e26d6518b72ba14"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for closure #1 @Sendable () async -&gt; () in closure #1 @Swift.MainActor () -&gt; () in MyFriendsFocus.ContactManager.fetchContacts() -&gt; ()"
+                  moduleName = "MyFriendsFocus"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/germanzykin/Documents/xcodeCum/MyFriendsFocus/MyFriendsFocus/ContactManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "61"
+                  endingLineNumber = "61"
+                  offsetFromSymbolStart = "50">
+               </Location>
+               <Location
+                  uuid = "0F19C26A-E20E-4393-8D75-E298B22CB98A - 94e2e9c8e292cf00"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(2) await resume partial function for closure #1 @Sendable () async -&gt; () in closure #1 @Swift.MainActor () -&gt; () in MyFriendsFocus.ContactManager.fetchContacts() -&gt; ()"
+                  moduleName = "MyFriendsFocus"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/germanzykin/Documents/xcodeCum/MyFriendsFocus/MyFriendsFocus/ContactManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "61"
+                  endingLineNumber = "61"
+                  offsetFromSymbolStart = "37">
+               </Location>
+               <Location
+                  uuid = "0F19C26A-E20E-4393-8D75-E298B22CB98A - 826c6fc5865d7e1a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for closure #1 @Sendable () async -&gt; () in closure #1 @Swift.MainActor () -&gt; () in MyFriendsFocus.ContactManager.fetchContacts() -&gt; ()"
+                  moduleName = "MyFriendsFocus"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/germanzykin/Documents/xcodeCum/MyFriendsFocus/MyFriendsFocus/ContactManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "61"
+                  endingLineNumber = "61"
+                  offsetFromSymbolStart = "106">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2A0F2110-2396-4926-AFC3-82F8D59BFCCB"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MyFriendsFocus/ContactManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "69"
+            endingLineNumber = "69"
+            landmarkName = "fetchContacts()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D3CC6728-C3BD-41E9-8707-63BA08F8AD16"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MyFriendsFocus/ContactManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
+            landmarkName = "fetchContacts()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "D3CC6728-C3BD-41E9-8707-63BA08F8AD16 - 826c6fc5865d7e7b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for closure #1 @Sendable () async -&gt; () in closure #1 @Swift.MainActor () -&gt; () in MyFriendsFocus.ContactManager.fetchContacts() -&gt; ()"
+                  moduleName = "MyFriendsFocus"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/germanzykin/Documents/xcodeCum/MyFriendsFocus/MyFriendsFocus/ContactManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "62"
+                  endingLineNumber = "62"
+                  offsetFromSymbolStart = "144">
+               </Location>
+               <Location
+                  uuid = "D3CC6728-C3BD-41E9-8707-63BA08F8AD16 - 4730617db3a80eb1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (MyFriendsFocus.DBSelectedContacts) -&gt; Swift.String in closure #1 @Sendable () async -&gt; () in closure #1 @Swift.MainActor () -&gt; () in MyFriendsFocus.ContactManager.fetchContacts() -&gt; ()"
+                  moduleName = "MyFriendsFocus"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/germanzykin/Documents/xcodeCum/MyFriendsFocus/MyFriendsFocus/ContactManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "62"
+                  endingLineNumber = "62"
+                  offsetFromSymbolStart = "36">
+               </Location>
+               <Location
+                  uuid = "D3CC6728-C3BD-41E9-8707-63BA08F8AD16 - 826c6fc5865d7e7b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for closure #1 @Sendable () async -&gt; () in closure #1 @Swift.MainActor () -&gt; () in MyFriendsFocus.ContactManager.fetchContacts() -&gt; ()"
+                  moduleName = "MyFriendsFocus"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/germanzykin/Documents/xcodeCum/MyFriendsFocus/MyFriendsFocus/ContactManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "62"
+                  endingLineNumber = "62"
+                  offsetFromSymbolStart = "168">
+               </Location>
+               <Location
+                  uuid = "D3CC6728-C3BD-41E9-8707-63BA08F8AD16 - 4730617db3a80eb1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (MyFriendsFocus.DBSelectedContacts) -&gt; Swift.String in closure #1 @Sendable () async -&gt; () in closure #1 @Swift.MainActor () -&gt; () in MyFriendsFocus.ContactManager.fetchContacts() -&gt; ()"
+                  moduleName = "MyFriendsFocus"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/germanzykin/Documents/xcodeCum/MyFriendsFocus/MyFriendsFocus/ContactManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "62"
+                  endingLineNumber = "62"
+                  offsetFromSymbolStart = "50">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C48C28EA-BEEF-4E44-9331-D1F82AE8BC35"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MyFriendsFocus/ContactManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
+            landmarkName = "fetchContacts()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "C48C28EA-BEEF-4E44-9331-D1F82AE8BC35 - 826c6fc5865d7e58"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for closure #1 @Sendable () async -&gt; () in closure #1 @Swift.MainActor () -&gt; () in MyFriendsFocus.ContactManager.fetchContacts() -&gt; ()"
+                  moduleName = "MyFriendsFocus"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/germanzykin/Documents/xcodeCum/MyFriendsFocus/MyFriendsFocus/ContactManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "63"
+                  endingLineNumber = "63"
+                  offsetFromSymbolStart = "244">
+               </Location>
+               <Location
+                  uuid = "C48C28EA-BEEF-4E44-9331-D1F82AE8BC35 - 826c6fc5865d7e58"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for closure #1 @Sendable () async -&gt; () in closure #1 @Swift.MainActor () -&gt; () in MyFriendsFocus.ContactManager.fetchContacts() -&gt; ()"
+                  moduleName = "MyFriendsFocus"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/germanzykin/Documents/xcodeCum/MyFriendsFocus/MyFriendsFocus/ContactManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "63"
+                  endingLineNumber = "63"
+                  offsetFromSymbolStart = "540">
+               </Location>
+               <Location
+                  uuid = "C48C28EA-BEEF-4E44-9331-D1F82AE8BC35 - 826c6fc5865d7e58"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for closure #1 @Sendable () async -&gt; () in closure #1 @Swift.MainActor () -&gt; () in MyFriendsFocus.ContactManager.fetchContacts() -&gt; ()"
+                  moduleName = "MyFriendsFocus"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/germanzykin/Documents/xcodeCum/MyFriendsFocus/MyFriendsFocus/ContactManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "63"
+                  endingLineNumber = "63"
+                  offsetFromSymbolStart = "257">
+               </Location>
+               <Location
+                  uuid = "C48C28EA-BEEF-4E44-9331-D1F82AE8BC35 - 826c6fc5865d7e58"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for closure #1 @Sendable () async -&gt; () in closure #1 @Swift.MainActor () -&gt; () in MyFriendsFocus.ContactManager.fetchContacts() -&gt; ()"
+                  moduleName = "MyFriendsFocus"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/germanzykin/Documents/xcodeCum/MyFriendsFocus/MyFriendsFocus/ContactManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "63"
+                  endingLineNumber = "63"
+                  offsetFromSymbolStart = "600">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0FDFDEC7-CB9A-4EE5-81F2-06C9AB042E5C"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MyFriendsFocus/ContactManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
+            landmarkName = "fetchContacts()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "0FDFDEC7-CB9A-4EE5-81F2-06C9AB042E5C - 826c6fc5865d7eb9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for closure #1 @Sendable () async -&gt; () in closure #1 @Swift.MainActor () -&gt; () in MyFriendsFocus.ContactManager.fetchContacts() -&gt; ()"
+                  moduleName = "MyFriendsFocus"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/germanzykin/Documents/xcodeCum/MyFriendsFocus/MyFriendsFocus/ContactManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "64"
+                  endingLineNumber = "64"
+                  offsetFromSymbolStart = "552">
+               </Location>
+               <Location
+                  uuid = "0FDFDEC7-CB9A-4EE5-81F2-06C9AB042E5C - 826c6fc5865d7eb9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for closure #1 @Sendable () async -&gt; () in closure #1 @Swift.MainActor () -&gt; () in MyFriendsFocus.ContactManager.fetchContacts() -&gt; ()"
+                  moduleName = "MyFriendsFocus"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/germanzykin/Documents/xcodeCum/MyFriendsFocus/MyFriendsFocus/ContactManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "64"
+                  endingLineNumber = "64"
+                  offsetFromSymbolStart = "618">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "99F093A1-F21A-455B-A734-4D9C6ECA647C"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MyFriendsFocus/ContactManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
+            landmarkName = "fetchContacts()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "99F093A1-F21A-455B-A734-4D9C6ECA647C - 826c6fc5865d7e86"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for closure #1 @Sendable () async -&gt; () in closure #1 @Swift.MainActor () -&gt; () in MyFriendsFocus.ContactManager.fetchContacts() -&gt; ()"
+                  moduleName = "MyFriendsFocus"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/germanzykin/Documents/xcodeCum/MyFriendsFocus/MyFriendsFocus/ContactManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "65"
+                  endingLineNumber = "65"
+                  offsetFromSymbolStart = "608">
+               </Location>
+               <Location
+                  uuid = "99F093A1-F21A-455B-A734-4D9C6ECA647C - 826c6fc5865d7e86"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for closure #1 @Sendable () async -&gt; () in closure #1 @Swift.MainActor () -&gt; () in MyFriendsFocus.ContactManager.fetchContacts() -&gt; ()"
+                  moduleName = "MyFriendsFocus"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/germanzykin/Documents/xcodeCum/MyFriendsFocus/MyFriendsFocus/ContactManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "65"
+                  endingLineNumber = "65"
+                  offsetFromSymbolStart = "690">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "52E939A1-A868-48AC-91EE-B47FE0656EA0"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MyFriendsFocus/ContactManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "67"
+            endingLineNumber = "67"
+            landmarkName = "fetchContacts()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "52E939A1-A868-48AC-91EE-B47FE0656EA0 - 826c6fc5865d7ee7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for closure #1 @Sendable () async -&gt; () in closure #1 @Swift.MainActor () -&gt; () in MyFriendsFocus.ContactManager.fetchContacts() -&gt; ()"
+                  moduleName = "MyFriendsFocus"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/germanzykin/Documents/xcodeCum/MyFriendsFocus/MyFriendsFocus/ContactManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "66"
+                  endingLineNumber = "66"
+                  offsetFromSymbolStart = "636">
+               </Location>
+               <Location
+                  uuid = "52E939A1-A868-48AC-91EE-B47FE0656EA0 - 826c6fc5865d7ee7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for closure #1 @Sendable () async -&gt; () in closure #1 @Swift.MainActor () -&gt; () in MyFriendsFocus.ContactManager.fetchContacts() -&gt; ()"
+                  moduleName = "MyFriendsFocus"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/germanzykin/Documents/xcodeCum/MyFriendsFocus/MyFriendsFocus/ContactManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "66"
+                  endingLineNumber = "66"
+                  offsetFromSymbolStart = "716">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6EBDB961-7B59-43ED-8ABB-33439A1D0FB2"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MyFriendsFocus/ContactManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "71"
+            endingLineNumber = "71"
+            landmarkName = "fetchContacts()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "6EBDB961-7B59-43ED-8ABB-33439A1D0FB2 - f4d0a9304360d2b1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 @Sendable () -&gt; () in closure #1 @Swift.MainActor () -&gt; () in MyFriendsFocus.ContactManager.fetchContacts() -&gt; ()"
+                  moduleName = "MyFriendsFocus"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/germanzykin/Documents/xcodeCum/MyFriendsFocus/MyFriendsFocus/ContactManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "71"
+                  endingLineNumber = "71"
+                  offsetFromSymbolStart = "120">
+               </Location>
+               <Location
+                  uuid = "6EBDB961-7B59-43ED-8ABB-33439A1D0FB2 - b26f82f5af298ec2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (__C.CNContact, Swift.UnsafeMutablePointer&lt;ObjectiveC.ObjCBool&gt;) -&gt; () in closure #2 @Sendable () -&gt; () in closure #1 @Swift.MainActor () -&gt; () in MyFriendsFocus.ContactManager.fetchContacts() -&gt; ()"
+                  moduleName = "MyFriendsFocus"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/germanzykin/Documents/xcodeCum/MyFriendsFocus/MyFriendsFocus/ContactManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "71"
+                  endingLineNumber = "71"
+                  offsetFromSymbolStart = "209">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5045B4E2-89DB-4A93-AB62-1D8A1F32B793"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MyFriendsFocus/ContactManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "70"
+            endingLineNumber = "70"
+            landmarkName = "fetchContacts()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "5045B4E2-89DB-4A93-AB62-1D8A1F32B793 - 27187d3328a7f4d8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in MyFriendsFocus.ContactManager.fetchContacts() -&gt; ()"
+                  moduleName = "MyFriendsFocus"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/germanzykin/Documents/xcodeCum/MyFriendsFocus/MyFriendsFocus/ContactManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "69"
+                  endingLineNumber = "69"
+                  offsetFromSymbolStart = "1475">
+               </Location>
+               <Location
+                  uuid = "5045B4E2-89DB-4A93-AB62-1D8A1F32B793 - f4d0a9304360d2f3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 @Sendable () -&gt; () in closure #1 @Swift.MainActor () -&gt; () in MyFriendsFocus.ContactManager.fetchContacts() -&gt; ()"
+                  moduleName = "MyFriendsFocus"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/germanzykin/Documents/xcodeCum/MyFriendsFocus/MyFriendsFocus/ContactManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "69"
+                  endingLineNumber = "69"
+                  offsetFromSymbolStart = "102">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8995B387-FBE7-4BDE-AAC4-D2A5FCFEBE53"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MyFriendsFocus/ContactManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "71"
+            endingLineNumber = "71"
+            landmarkName = "fetchContacts()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "8995B387-FBE7-4BDE-AAC4-D2A5FCFEBE53 - f4d0a9304360d2b1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 @Sendable () -&gt; () in closure #1 @Swift.MainActor () -&gt; () in MyFriendsFocus.ContactManager.fetchContacts() -&gt; ()"
+                  moduleName = "MyFriendsFocus"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/germanzykin/Documents/xcodeCum/MyFriendsFocus/MyFriendsFocus/ContactManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "71"
+                  endingLineNumber = "71"
+                  offsetFromSymbolStart = "120">
+               </Location>
+               <Location
+                  uuid = "8995B387-FBE7-4BDE-AAC4-D2A5FCFEBE53 - b26f82f5af298ec2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (__C.CNContact, Swift.UnsafeMutablePointer&lt;ObjectiveC.ObjCBool&gt;) -&gt; () in closure #2 @Sendable () -&gt; () in closure #1 @Swift.MainActor () -&gt; () in MyFriendsFocus.ContactManager.fetchContacts() -&gt; ()"
+                  moduleName = "MyFriendsFocus"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/germanzykin/Documents/xcodeCum/MyFriendsFocus/MyFriendsFocus/ContactManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "71"
+                  endingLineNumber = "71"
+                  offsetFromSymbolStart = "209">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "104118D7-5C81-415F-BB7F-A5E3E6BA9ABB"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MyFriendsFocus/ContactManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "73"
+            endingLineNumber = "73"
+            landmarkName = "fetchContacts()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "104118D7-5C81-415F-BB7F-A5E3E6BA9ABB - b26f82f5af298e23"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (__C.CNContact, Swift.UnsafeMutablePointer&lt;ObjectiveC.ObjCBool&gt;) -&gt; () in closure #2 @Sendable () -&gt; () in closure #1 @Swift.MainActor () -&gt; () in MyFriendsFocus.ContactManager.fetchContacts() -&gt; ()"
+                  moduleName = "MyFriendsFocus"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/germanzykin/Documents/xcodeCum/MyFriendsFocus/MyFriendsFocus/ContactManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "72"
+                  endingLineNumber = "72"
+                  offsetFromSymbolStart = "226">
+               </Location>
+               <Location
+                  uuid = "104118D7-5C81-415F-BB7F-A5E3E6BA9ABB - 50fe6fcbf4629331"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in closure #1 (__C.CNContact, Swift.UnsafeMutablePointer&lt;ObjectiveC.ObjCBool&gt;) -&gt; () in closure #2 @Sendable () -&gt; () in closure #1 @Swift.MainActor () -&gt; () in MyFriendsFocus.ContactManager.fetchContacts() -&gt; ()"
+                  moduleName = "MyFriendsFocus"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/germanzykin/Documents/xcodeCum/MyFriendsFocus/MyFriendsFocus/ContactManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "72"
+                  endingLineNumber = "72"
+                  offsetFromSymbolStart = "122">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FD9234C7-3318-42CC-95BF-D97F0D47541B"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MyFriendsFocus/ContactManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "72"
+            endingLineNumber = "72"
+            landmarkName = "fetchContacts()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "FD9234C7-3318-42CC-95BF-D97F0D47541B - f4d0a9304360d2b1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 @Sendable () -&gt; () in closure #1 @Swift.MainActor () -&gt; () in MyFriendsFocus.ContactManager.fetchContacts() -&gt; ()"
+                  moduleName = "MyFriendsFocus"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/germanzykin/Documents/xcodeCum/MyFriendsFocus/MyFriendsFocus/ContactManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "71"
+                  endingLineNumber = "71"
+                  offsetFromSymbolStart = "120">
+               </Location>
+               <Location
+                  uuid = "FD9234C7-3318-42CC-95BF-D97F0D47541B - b26f82f5af298ec2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (__C.CNContact, Swift.UnsafeMutablePointer&lt;ObjectiveC.ObjCBool&gt;) -&gt; () in closure #2 @Sendable () -&gt; () in closure #1 @Swift.MainActor () -&gt; () in MyFriendsFocus.ContactManager.fetchContacts() -&gt; ()"
+                  moduleName = "MyFriendsFocus"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/germanzykin/Documents/xcodeCum/MyFriendsFocus/MyFriendsFocus/ContactManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "71"
+                  endingLineNumber = "71"
+                  offsetFromSymbolStart = "209">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

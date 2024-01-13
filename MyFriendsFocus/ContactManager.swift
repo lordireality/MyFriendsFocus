@@ -32,7 +32,7 @@ class ContactManager: ObservableObject{
     ///array of fetched contacts
     @Published var contactData:[ContactInfo] = []
     ///this device contact
-    var thisDeviceContact:ContactInfo = ContactInfo(fullName: "Вы", isFocus: false, profilePicData: nil)
+    @Published var thisDeviceContact:ContactInfo = ContactInfo(fullName: "Вы", isFocus: false, profilePicData: nil)
     ///Is fetching contacts was succesfull
     var resp = false
     ///if exception on fectch contacts was thrown, text will be placed here
@@ -53,12 +53,23 @@ class ContactManager: ObservableObject{
         DispatchQueue.main.async {
             self.contactData.removeAll()
             self.thisDeviceContact = ContactInfo(fullName: "Вы", isFocus: false, profilePicData: nil);
+        }
+        Task{
             let keys = [CNContactGivenNameKey, CNContactFamilyNameKey, CNContactMiddleNameKey, CNContactThumbnailImageDataKey, CNContactIdentifierKey]
             let request = CNContactFetchRequest(keysToFetch: keys as [CNKeyDescriptor])
+            //request.predicate = CNContact.predicateForContacts(withIdentifiers: ["8A05765-1BF2-4063-A428-07D4543F8261"])
+            if UserDefaults.standard.bool(forKey: UserDefaults.Keys.showSelected.rawValue) == true{
+                    var relations = await DBManager.shared.getRelations()
+                    var identifiers = relations.map{ ($0.contactIndentifier ?? "")}
+                    if let thisdevice =  UserDefaults.standard.string(forKey: UserDefaults.Keys.thisDeviceContactIdentifier.rawValue){
+                        identifiers.append(thisdevice)
+                    }
+                    request.predicate = CNContact.predicateForContacts(withIdentifiers: identifiers)
+                
+            }
             DispatchQueue.global().async {
                 do {
                     try self.store.enumerateContacts(with: request) { contact, stop in
-                        
                         DispatchQueue.main.async {
                             if(contact.identifier != UserDefaults.standard.string(forKey: UserDefaults.Keys.thisDeviceContactIdentifier.rawValue)){
                                 self.contactData.append(ContactInfo(identifier: contact.identifier, fullName: "\(contact.familyName) \(contact.givenName) \(contact.middleName)", profilePicData:  contact.thumbnailImageData))
@@ -76,6 +87,7 @@ class ContactManager: ObservableObject{
                     
                 }
             }
+            
         }
     }
     
