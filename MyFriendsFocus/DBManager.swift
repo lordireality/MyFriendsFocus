@@ -45,11 +45,21 @@ class DBManager: ObservableObject{
     func createContactRelation(contactIdentifier: String) async -> DBSelectedContacts?{
         await withCheckedContinuation({ continuation in
             self.backgroundContext.performAndWait{
-                let contactRelation = DBSelectedContacts(context: self.backgroundContext)
-                contactRelation.id = .init()
-                contactRelation.contactIndentifier = contactIdentifier
-                self.saveContext()
-                continuation.resume(returning: contactRelation)
+                let req = DBSelectedContacts.fetchRequest()
+                let predicate = NSPredicate(format: "contactIndentifier == %@", contactIdentifier)
+                req.predicate = predicate
+                req.fetchLimit = 1
+                let res = (try? self.backgroundContext.fetch(req)) ?? []
+                if !res.isEmpty{
+                    continuation.resume(returning: nil)
+                } else {
+                    let contactRelation = DBSelectedContacts(context: self.backgroundContext)
+                    contactRelation.id = .init()
+                    contactRelation.contactIndentifier = contactIdentifier
+                    self.saveContext()
+                    continuation.resume(returning: contactRelation)
+                }
+                
             }
         })
     }

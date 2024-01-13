@@ -16,6 +16,7 @@ struct SettingsView: View {
     @State private var showingSelContactSelect:Bool = false
     @State private var showingUDAlert:Bool = false
     @State private var showingRemoveMyCardAlert:Bool = false
+    @State private var showingAddRelAlert = false
     @State private var showOnlyFocused = UserDefaults.standard.bool(forKey: UserDefaults.Keys.showOnlyFocused.rawValue)
     @State private var showSelectedContacts = UserDefaults.standard.bool(forKey: UserDefaults.Keys.showSelected.rawValue)
     @State private var selectedContacts:[DBSelectedContacts] = []
@@ -84,6 +85,9 @@ struct SettingsView: View {
                     .sheet(isPresented: $showingSelContactSelect, onDismiss: addRelatedToList) {
                         ContactPickerView(selectedContact: $lastSelContact)
                     }
+                    .alert("#ErrorAddRel", isPresented: $showingAddRelAlert) {
+                        Button("#OK", role: .cancel) { }
+                    }
                     
                     List {
                         ForEach(selectedContacts) { selectedContacts in
@@ -143,6 +147,8 @@ struct SettingsView: View {
                 if let res {
                     getRelated()
                     contactManager.fetchContacts()
+                } else {
+                    showingAddRelAlert = true
                 }
                 
             }

@@ -152,6 +152,22 @@
         }
       }
     },
+    "#ErrorAddRel" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Error occurred on adding selected contact"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Ошибка добавления выбранного контакта"
+          }
+        }
+      }
+    },
     "#FocusAccess" : {
       "extractionState" : "manual",
       "localizations" : {
