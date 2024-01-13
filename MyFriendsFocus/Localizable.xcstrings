@@ -2,7 +2,20 @@
   "sourceLanguage" : "en",
   "strings" : {
     "#AddContactToSelected" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Select contact"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Выбрать контакт"
+          }
+        }
+      }
     },
     "#ClearUD" : {
       "extractionState" : "manual",
@@ -124,7 +137,20 @@
       }
     },
     "#DeletedContact" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Unknown Contact"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Неизвестный контакт"
+          }
+        }
+      }
     },
     "#FocusAccess" : {
       "extractionState" : "manual",
@@ -210,7 +236,20 @@
       }
     },
     "#MyCardCleared" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "My contact cleared"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Контакт очищен"
+          }
+        }
+      }
     },
     "#MyContacts" : {
       "localizations" : {
@@ -312,7 +351,20 @@
       }
     },
     "#RemoveMyCard" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Clear my contact"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Сбросить мой контакт"
+          }
+        }
+      }
     },
     "#SelectMyCard" : {
       "localizations" : {
@@ -348,10 +400,36 @@
       }
     },
     "#ShowFocusedOnly" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Show only focused"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Показывать контакты только в фокусировании"
+          }
+        }
+      }
     },
     "#ShowSelectedContacts" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Show selected contacts only"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Показывать только избранные"
+          }
+        }
+      }
     },
     "#SortBy" : {
       "localizations" : {
