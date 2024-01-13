@@ -74,6 +74,7 @@ struct SettingsView: View {
                 }
 
                 if showSelectedContacts == true {
+                    
                     Button("#AddContactToSelected"){
                         impactFeedback.impactOccurred()
                         showingSelContactSelect = true
@@ -98,6 +99,9 @@ struct SettingsView: View {
                             }
                         }
                     }.refreshable {
+                        getRelated()
+                    }
+                    .onAppear(){
                         getRelated()
                     }
                 }
